@@ -195,7 +195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1.8}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &155538367
 BoxCollider2D:
@@ -221,7 +221,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!66 &155538368
 CompositeCollider2D:
@@ -243,34 +243,32 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 155538367}
     m_ColliderPaths:
-    - - X: 4499707
-        Y: -4500000
-      - X: 4499707
-        Y: 4500000
-      - X: -4500000
-        Y: 4499707
-      - X: -4499707
-        Y: -4500000
+    - - X: 4999706
+        Y: -5000001
+      - X: 4999708
+        Y: 4999999
+      - X: -4999999
+        Y: 4999708
+      - X: -4999708
+        Y: -4999999
   - m_Collider: {fileID: 155538366}
     m_ColliderPaths:
-    - - X: 14499707
-        Y: -3999999
-      - X: 14499707
-        Y: 14000000
-      - X: 5500000
-        Y: 13999707
-      - X: 5500293
-        Y: -3999999
+    - - X: 14999706
+        Y: -5000002
+      - X: 14999709
+        Y: 14999998
+      - X: 5000002
+        Y: 14999706
+      - X: 5000292
+        Y: -5000001
   m_CompositePaths:
     m_Paths:
-    - - {x: 1.4499414, y: -0.39999992}
-      - {x: 1.4499414, y: 1.4}
-      - {x: 0.55, y: 1.3999414}
-      - {x: 0.5500586, y: -0.39999992}
-    - - {x: 0.4499414, y: -0.45000002}
-      - {x: 0.4499414, y: 0.45000002}
-      - {x: -0.45000002, y: 0.4499414}
-      - {x: -0.4499414, y: -0.45000002}
+    - - {x: 1.4999413, y: -0.5000002}
+      - {x: 1.4999416, y: 1.4999998}
+      - {x: 0.5000002, y: 1.4999413}
+      - {x: 0.4999853, y: 0.4999999}
+      - {x: -0.4999999, y: 0.4999415}
+      - {x: -0.4999415, y: -0.4999999}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &155538369
@@ -481,7 +479,7 @@ MonoBehaviour:
   isEnemy: 0
   direction: {fileID: 0}
   initDelay: 0
-  conDelay: 1
+  conDelay: 0.75
 --- !u!212 &1048624684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -586,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58a2fe420864d5489d040d778192399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 3
+  maxHp: 1000
 --- !u!1001 &1122279808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 1048624685}
     - target: {fileID: 7150353476299602811, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
       propertyPath: conDelay
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
@@ -677,14 +675,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496230193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155538364}
   m_Father: {fileID: 1048624685}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!114 &1496230195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,5 +769,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1048624685}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7150353475345442646, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d41776cfe2269de4a85453ee1335a013, type: 3}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class Attacker : MonoBehaviour
 
     public bool attackTrigger;
 
+	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
+	public Action attack;
+
     void Attack()
 	{
         range.transform.position = attPos.position;
@@ -18,14 +22,13 @@ public class Attacker : MonoBehaviour
     IEnumerator DelayOnOff()
 	{
         range.gameObject.SetActive(true);
-		range.transform.position += new Vector3(Random.Range(-0.01f, 0.01f), Random.Range(-0.01f, 0.01f));
-
 		yield return null;
         range.gameObject.SetActive(false);
 	}
 
 	private void Awake()
 	{
+		attack = Attack;
 		range.gameObject.SetActive(false);
 	}
 
@@ -33,8 +36,9 @@ public class Attacker : MonoBehaviour
 	{
 		if (attackTrigger)
 		{
-			Attack();
 			attackTrigger = false;
+			Attack();
+			
 		}
 	}
 }

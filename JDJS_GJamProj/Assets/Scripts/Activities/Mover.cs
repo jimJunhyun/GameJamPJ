@@ -21,11 +21,13 @@ public class Mover : MonoBehaviour
     public float initDelay;
     public float conDelay;
 
-    
-    
+    bool isInvoking = false;
+    Vector2 dir = Vector2.zero;
+    Attacker attack;
+
     void Move()
 	{
-        Vector2 dir = Vector2.zero;
+        
         if(currentPos.x != targetPos.x)
 		{
             if (currentPos.x > targetPos.x)
@@ -69,7 +71,8 @@ public class Mover : MonoBehaviour
             direction.localPosition = dir;
 		}
         currentPos += dir;
-	}
+
+    }
 
     IEnumerator DelayMove()
 	{
@@ -78,8 +81,13 @@ public class Mover : MonoBehaviour
         while (true)
 		{
             yield return new WaitForSeconds(conDelay);
+            
 			if (stop)
 			{
+				if (isEnemy)
+				{
+                    attack.attack.Invoke();
+				}
                 stop = false;
                 continue;
 			}
@@ -87,9 +95,30 @@ public class Mover : MonoBehaviour
 		}
 	}
 
+    IEnumerator LerpMove()
+	{
+        Vector2 prevPos = transform.position;
+        float t = 0;
+        while (t < conDelay / 2)
+		{
+            yield return null;
+            
+            t += Time.deltaTime;
+            transform.position = Vector3.Lerp(prevPos, currentPos, t / (conDelay / 2));
+		}
+        isInvoking = false;
+        
+    }
+
+    public bool Approximate(float a, float b, float err)
+	{
+        return Mathf.Abs(a - b) < err;
+	}
+
     // Start is called before the first frame update
     void Awake()
     {
+        attack = GetComponent<Attacker>();
         currentPos = transform.position;
         if(targetPos != null)
         { 
@@ -103,6 +132,12 @@ public class Mover : MonoBehaviour
 		{
             targetPos = target.position;
         }
-		transform.position = currentPos;
-	}
+        if ((transform.position.x != currentPos.x || transform.position.y != currentPos.y) && !isInvoking)
+        {
+            isInvoking = true;
+            StartCoroutine(LerpMove());
+        }
+
+    }
+
 }

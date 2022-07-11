@@ -37,7 +37,7 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 270);
 			}
 		}
-		if (Input.GetKeyDown(KeyCode.A))
+		if (Input.GetMouseButtonDown(0))
 		{
 			myAtt.attackTrigger = true;
 		}

@@ -18,7 +18,6 @@ public class EnemyCtrl : MonoBehaviour
     {
 		if (detect.detected)
 		{
-			attack.attackTrigger = true;
 			move.stop = true;
 		}
     }

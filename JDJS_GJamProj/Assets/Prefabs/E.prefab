@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7150353475345442649}
-  - component: {fileID: 7150353475345442646}
   m_Layer: 0
   m_Name: AttPos
   m_TagString: Untagged
@@ -32,21 +31,6 @@ Transform:
   m_Father: {fileID: 7150353476967008679}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7150353475345442646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7150353475345442648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a445249ca547a37469eb96b80a33da85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: {fileID: 7150353476767328432}
-  attPos: {fileID: 7150353475345442649}
-  attackTrigger: 0
 --- !u!1 &7150353475860689859
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +90,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &7150353475860689884
 BoxCollider2D:
@@ -132,7 +116,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 2.7}
+  m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &7150353475860689887
 Rigidbody2D:
@@ -175,34 +159,34 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 7150353475860689885}
     m_ColliderPaths:
-    - - X: 14499707
-        Y: -4500000
-      - X: 14499707
-        Y: 4500000
-      - X: 5500000
-        Y: 4499707
-      - X: 5500293
-        Y: -4500000
+    - - X: 14999707
+        Y: -5000000
+      - X: 14999707
+        Y: 5000000
+      - X: 5000000
+        Y: 4999707
+      - X: 5000293
+        Y: -5000000
   - m_Collider: {fileID: 7150353475860689884}
     m_ColliderPaths:
-    - - X: 4499707
-        Y: -13500000
-      - X: 4499707
-        Y: 13500000
-      - X: -4500000
-        Y: 13499707
-      - X: -4499707
-        Y: -13500000
+    - - X: 4999707
+        Y: -15000000
+      - X: 4999707
+        Y: 15000000
+      - X: -5000000
+        Y: 14999707
+      - X: -4999707
+        Y: -15000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4499414, y: -1.35}
-      - {x: 0.4499414, y: 1.35}
-      - {x: -0.45000002, y: 1.3499414}
-      - {x: -0.4499414, y: -1.35}
-    - - {x: 1.4499414, y: -0.45000002}
-      - {x: 1.4499414, y: 0.45000002}
-      - {x: 0.55, y: 0.4499414}
-      - {x: 0.5500586, y: -0.45000002}
+    - - {x: 0.4999414, y: -1.5}
+      - {x: 0.5000001, y: -0.5}
+      - {x: 1.4999707, y: -0.4999707}
+      - {x: 1.4999415, y: 0.5}
+      - {x: 0.4999707, y: 0.5000001}
+      - {x: 0.4999414, y: 1.5}
+      - {x: -0.5, y: 1.4999415}
+      - {x: -0.4999414, y: -1.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!114 &7150353475860689857
@@ -451,7 +435,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &7150353476767328399
 BoxCollider2D:
@@ -477,7 +461,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 2.7}
+  m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &7150353476767328398
 Rigidbody2D:
@@ -520,34 +504,34 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 7150353476767328396}
     m_ColliderPaths:
-    - - X: 14499707
-        Y: -4500000
-      - X: 14499707
-        Y: 4500000
-      - X: 5500000
-        Y: 4499707
-      - X: 5500293
-        Y: -4500000
+    - - X: 14999707
+        Y: -5000000
+      - X: 14999707
+        Y: 5000000
+      - X: 5000000
+        Y: 4999707
+      - X: 5000293
+        Y: -5000000
   - m_Collider: {fileID: 7150353476767328399}
     m_ColliderPaths:
-    - - X: 4499707
-        Y: -13500000
-      - X: 4499707
-        Y: 13500000
-      - X: -4500000
-        Y: 13499707
-      - X: -4499707
-        Y: -13500000
+    - - X: 4999707
+        Y: -15000000
+      - X: 4999707
+        Y: 15000000
+      - X: -5000000
+        Y: 14999707
+      - X: -4999707
+        Y: -15000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4499414, y: -1.35}
-      - {x: 0.4499414, y: 1.35}
-      - {x: -0.45000002, y: 1.3499414}
-      - {x: -0.4499414, y: -1.35}
-    - - {x: 1.4499414, y: -0.45000002}
-      - {x: 1.4499414, y: 0.45000002}
-      - {x: 0.55, y: 0.4499414}
-      - {x: 0.5500586, y: -0.45000002}
+    - - {x: 0.4999414, y: -1.5}
+      - {x: 0.5000001, y: -0.5}
+      - {x: 1.4999707, y: -0.4999707}
+      - {x: 1.4999415, y: 0.5}
+      - {x: 0.4999707, y: 0.5000001}
+      - {x: 0.4999414, y: 1.5}
+      - {x: -0.5, y: 1.4999415}
+      - {x: -0.4999414, y: -1.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!114 &7150353476767328432
