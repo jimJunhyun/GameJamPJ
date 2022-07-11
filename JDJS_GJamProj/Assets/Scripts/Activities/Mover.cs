@@ -11,8 +11,9 @@ public class Mover : MonoBehaviour
     public bool stop = false;
 
     public Transform target;
+    
 
-    [Header("적일 경우 체크. 밑의 것은 방향 조정")]
+    [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
     public bool isEnemy = true;
 
@@ -27,16 +28,15 @@ public class Mover : MonoBehaviour
 
     void Move()
 	{
-        
-        if(currentPos.x != targetPos.x)
-		{
+        if (currentPos.x != targetPos.x)
+        {
             if (currentPos.x > targetPos.x)
             {
                 dir = Vector2.left;
-				if (isEnemy)
-				{
-                    direction.eulerAngles = new Vector3(0,0, 180);
-				}
+                if (isEnemy)
+                {
+                    direction.eulerAngles = new Vector3(0, 0, 180);
+                }
             }
             if (currentPos.x < targetPos.x)
             {
@@ -47,8 +47,8 @@ public class Mover : MonoBehaviour
                 }
             }
         }
-        else if(currentPos.y != targetPos.y)
-		{
+        else if (currentPos.y != targetPos.y)
+        {
             if (currentPos.y > targetPos.y)
             {
                 dir = Vector2.down;
@@ -65,16 +65,23 @@ public class Mover : MonoBehaviour
                     direction.eulerAngles = new Vector3(0, 0, 90);
                 }
             }
+            if (isEnemy)
+            {
+                direction.localPosition = dir;
+            }
         }
-		if (isEnemy)
+        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f))
 		{
-            direction.localPosition = dir;
-		}
-        currentPos += dir;
-
+            currentPos += dir;
+        }
     }
 
-    IEnumerator DelayMove()
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawWireCube(direction.position, Vector2.one * 0.5f);
+	}
+
+	IEnumerator DelayMove()
 	{
         yield return new WaitForSeconds(initDelay);
 
@@ -86,6 +93,7 @@ public class Mover : MonoBehaviour
 			{
 				if (isEnemy)
 				{
+                    
                     attack.attack.Invoke();
 				}
                 stop = false;
@@ -119,6 +127,10 @@ public class Mover : MonoBehaviour
     void Awake()
     {
         attack = GetComponent<Attacker>();
+		if (isEnemy)
+		{
+            target = GameObject.Find("Player").transform;
+		}
         currentPos = transform.position;
         if(targetPos != null)
         { 
@@ -128,7 +140,7 @@ public class Mover : MonoBehaviour
     }
 	private void Update()
 	{
-        if(targetPos != null)
+        if (targetPos != null)
 		{
             targetPos = target.position;
         }

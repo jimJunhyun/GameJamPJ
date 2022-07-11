@@ -15,6 +15,7 @@ public class Attacker : MonoBehaviour
 
     void Attack()
 	{
+		
         range.transform.position = attPos.position;
         StartCoroutine(DelayOnOff());
 	}
@@ -22,7 +23,7 @@ public class Attacker : MonoBehaviour
     IEnumerator DelayOnOff()
 	{
         range.gameObject.SetActive(true);
-		yield return null;
+		yield return new WaitForSeconds(0.1f);
         range.gameObject.SetActive(false);
 	}
 

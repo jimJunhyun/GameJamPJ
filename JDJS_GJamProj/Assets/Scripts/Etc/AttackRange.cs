@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class AttackRange : MonoBehaviour
 {
-
+	public string detectTag;
 	public int damage;
+
+	public bool damaged;
+
 	HpObject target;
-
-	private void OnEnable()
-	{
-		Debug.Log("!!?!?!?!?!");
-		transform.position += new Vector3(Random.Range(-0.01f, 0.01f), Random.Range(-0.01f, 0.01f));
-	}
-
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if ((target = collision.GetComponent<HpObject>()) && target != GetComponentInParent<HpObject>())
+		if ((target = collision.GetComponent<HpObject>()) && target != GetComponentInParent<HpObject>() && target.CompareTag(detectTag) && !damaged)
 		{
 			target.Damaged.Invoke(damage);
+			damaged = false;
 		}
 	}
 }
