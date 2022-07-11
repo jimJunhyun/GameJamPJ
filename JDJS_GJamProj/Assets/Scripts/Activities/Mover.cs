@@ -7,11 +7,21 @@ public class Mover : MonoBehaviour
 {
     public Vector2 currentPos;
     public Vector2 targetPos;
+    
+    public bool stop = false;
 
     public Transform target;
 
+    [Header("적일 경우 체크. 밑의 것은 방향 조정")]
+
+    public bool isEnemy = true;
+
+    public Transform direction;
+
     public float initDelay;
     public float conDelay;
+
+    
     
     void Move()
 	{
@@ -21,10 +31,18 @@ public class Mover : MonoBehaviour
             if (currentPos.x > targetPos.x)
             {
                 dir = Vector2.left;
+				if (isEnemy)
+				{
+                    direction.eulerAngles = new Vector3(0,0, 180);
+				}
             }
             if (currentPos.x < targetPos.x)
             {
                 dir = Vector2.right;
+                if (isEnemy)
+                {
+                    direction.eulerAngles = new Vector3(0, 0, 0);
+                }
             }
         }
         else if(currentPos.y != targetPos.y)
@@ -32,12 +50,24 @@ public class Mover : MonoBehaviour
             if (currentPos.y > targetPos.y)
             {
                 dir = Vector2.down;
+                if (isEnemy)
+                {
+                    direction.eulerAngles = new Vector3(0, 0, 270);
+                }
             }
             if (currentPos.y < targetPos.y)
             {
                 dir = Vector2.up;
+                if (isEnemy)
+                {
+                    direction.eulerAngles = new Vector3(0, 0, 90);
+                }
             }
         }
+		if (isEnemy)
+		{
+            direction.localPosition = dir;
+		}
         currentPos += dir;
 	}
 
@@ -48,6 +78,11 @@ public class Mover : MonoBehaviour
         while (true)
 		{
             yield return new WaitForSeconds(conDelay);
+			if (stop)
+			{
+                stop = false;
+                continue;
+			}
             Move();
 		}
 	}
