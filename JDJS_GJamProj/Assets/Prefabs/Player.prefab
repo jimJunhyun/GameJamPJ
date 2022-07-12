@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107888b7501e48a47934956e19a130e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooltime: 0.5
 --- !u!114 &8076858744202109979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +339,8 @@ MonoBehaviour:
   stop: 0
   target: {fileID: 8076858744202109981}
   ignoreLayer: 2
+  runBoolName: Run
+  idleBoolName: Idle
   isEnemy: 0
   direction: {fileID: 8076858744202109981}
   initDelay: 0
@@ -381,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 40
+  currentHp: 0
 --- !u!50 &6034419237902049757
 Rigidbody2D:
   serializedVersion: 4
