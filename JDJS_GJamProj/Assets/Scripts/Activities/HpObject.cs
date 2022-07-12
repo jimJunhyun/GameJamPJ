@@ -9,16 +9,21 @@ public class HpObject : MonoBehaviour
 	[HideInInspector]
 	public int currentHp;
     public Action<int> Damaged;
+	public string HitTriggerName = "Hit";
+
+	Animator anim;
 
 	void HpDecrease(int dam)
 	{
 		currentHp -= dam;
+		anim.SetTrigger(HitTriggerName);
 	}
 
 	private void Awake()
 	{
 		currentHp = maxHp;
 		Damaged = HpDecrease;
+		anim = GetComponent<Animator>();
 	}
 	private void Update()
 	{
@@ -26,5 +31,6 @@ public class HpObject : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		
 	}
 }
