@@ -13,6 +13,7 @@ public class Mover : MonoBehaviour
     public Transform target;
 
     public int ignoreLayer = 2;
+    public int ignoreLayer2 = 6;
 
     [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
@@ -80,6 +81,11 @@ public class Mover : MonoBehaviour
 		{
             currentPos += dir;
         }
+        Collider2D box = Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, 1 << 6);
+        if (box)
+        {
+            CameraManager.instance.MoveCMVcam(box.transform.parent.GetComponent<Transform>());
+        }
     }
 
 	private void OnDrawGizmos()
@@ -141,7 +147,8 @@ public class Mover : MonoBehaviour
         { 
             targetPos = target.position;
         }
-        ignoreLayer  = ~(1 << ignoreLayer);
+        ignoreLayer  = ~(1 << ignoreLayer) & ~(1<<ignoreLayer2);
+        
         StartCoroutine(DelayMove());
     }
 	private void Update()
