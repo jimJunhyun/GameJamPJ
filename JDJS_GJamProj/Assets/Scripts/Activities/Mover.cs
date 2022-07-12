@@ -11,7 +11,8 @@ public class Mover : MonoBehaviour
     public bool stop = false;
 
     public Transform target;
-    
+
+    public int ignoreLayer = 2;
 
     [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
@@ -75,7 +76,7 @@ public class Mover : MonoBehaviour
                 direction.localPosition = dir;
             }
         }
-        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f))
+        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, ignoreLayer))
 		{
             currentPos += dir;
         }
@@ -98,7 +99,6 @@ public class Mover : MonoBehaviour
 			{
 				if (isEnemy)
 				{
-                    
                     attack.attack.Invoke();
 				}
                 stop = false;
@@ -141,6 +141,7 @@ public class Mover : MonoBehaviour
         { 
             targetPos = target.position;
         }
+        ignoreLayer  = ~(1 << ignoreLayer);
         StartCoroutine(DelayMove());
     }
 	private void Update()
