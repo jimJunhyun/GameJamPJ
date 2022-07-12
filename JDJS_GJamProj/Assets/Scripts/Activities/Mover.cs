@@ -12,12 +12,14 @@ public class Mover : MonoBehaviour
 
     public float initDelay;
     public float conDelay;
-    
+
+    public Animator animator;
+
     void Move()
-	{
+    {
         Vector2 dir = Vector2.zero;
-        if(currentPos.x != targetPos.x)
-		{
+        if (currentPos.x != targetPos.x)
+        {
             if (currentPos.x > targetPos.x)
             {
                 dir = Vector2.left;
@@ -27,8 +29,8 @@ public class Mover : MonoBehaviour
                 dir = Vector2.right;
             }
         }
-        else if(currentPos.y != targetPos.y)
-		{
+        else if (currentPos.y != targetPos.y)
+        {
             if (currentPos.y > targetPos.y)
             {
                 dir = Vector2.down;
@@ -39,35 +41,36 @@ public class Mover : MonoBehaviour
             }
         }
         currentPos += dir;
-	}
+        animator.SetTrigger("IsMove");
+    }
 
     IEnumerator DelayMove()
-	{
+    {
         yield return new WaitForSeconds(initDelay);
 
         while (true)
-		{
+        {
             yield return new WaitForSeconds(conDelay);
             Move();
-		}
-	}
+        }
+    }
 
     // Start is called before the first frame update
     void Awake()
     {
         currentPos = transform.position;
-        if(targetPos != null)
-        { 
+        if (targetPos != null)
+        {
             targetPos = target.position;
         }
         StartCoroutine(DelayMove());
     }
-	private void Update()
-	{
-        if(targetPos != null)
-		{
+    private void Update()
+    {
+        if (targetPos != null)
+        {
             targetPos = target.position;
         }
-		transform.position = currentPos;
-	}
+        transform.position = currentPos;
+    }
 }

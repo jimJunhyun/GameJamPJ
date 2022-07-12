@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+	public Weapon weapon;
+
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-
+			weapon.Attack();
 		}
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
 		{
