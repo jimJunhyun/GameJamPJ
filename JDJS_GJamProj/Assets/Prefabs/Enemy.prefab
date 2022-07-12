@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7150353475860689887}
   - component: {fileID: 7150353475860689886}
   - component: {fileID: 7150353475860689857}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DetectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 7150353476767328398}
   - component: {fileID: 7150353476767328433}
   - component: {fileID: 7150353476767328432}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
