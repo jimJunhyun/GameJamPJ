@@ -10,6 +10,7 @@ public class HpObject : MonoBehaviour
 	public int currentHp;
     public Action<int> Damaged;
 	public string HitTriggerName = "Hit";
+	[SerializeField] GameObject dropCoin;
 
 	Animator anim;
 
@@ -29,6 +30,7 @@ public class HpObject : MonoBehaviour
 	{
 		if(currentHp <= 0)
 		{
+			Instantiate(dropCoin, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}
 		

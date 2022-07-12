@@ -1567,6 +1567,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map1
       objectReference: {fileID: 0}
+    - target: {fileID: 2880963760090948812, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: dropCoin
+      value: 
+      objectReference: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+    - target: {fileID: 2880963761094858701, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880963761094858701, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626810027586637928, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626810027586637928, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626810028860367721, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: dropCoin
+      value: 
+      objectReference: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+    - target: {fileID: 4025692141799503741, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025692141799503741, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025692142941881468, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: dropCoin
+      value: 
+      objectReference: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
 --- !u!1 &745550614
@@ -1690,6 +1726,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 395588599078634466, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
+      propertyPath: dropCoin
+      value: 
+      objectReference: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+    - target: {fileID: 395588600222019811, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395588600222019811, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7150353476299602809, guid: d41776cfe2269de4a85453ee1335a013, type: 3}
       propertyPath: m_RootOrder
       value: 2
