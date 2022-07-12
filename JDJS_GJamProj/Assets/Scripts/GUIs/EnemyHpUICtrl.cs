@@ -14,12 +14,13 @@ public class EnemyHpUICtrl : MonoBehaviour
     {
         hp = GetComponentInParent<HpObject>();
         bar = GetComponent<Slider>();
-        prevVal = hp.maxHp;
+        prevVal = 0;
     }
 	private void Update()
 	{
 		if(prevVal != hp.currentHp)
 		{
+            prevVal = hp.currentHp;
             bar.value = prevVal;
 
 		}
