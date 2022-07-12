@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+	public float cooltime = 0.5f;
+
 	Attacker myAtt;
 	Vector2 dir;
+	bool attackable = true;
 
 	private void Awake()
 	{
 		myAtt = GetComponent<Attacker>();
+		StartCoroutine(Cooldown());
 	}
 
 	private void Update()
@@ -37,9 +41,24 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 270);
 			}
 		}
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && attackable)
 		{
 			myAtt.attackTrigger = true;
+			attackable = false;
+		}
+	}
+
+	IEnumerator Cooldown()
+	{
+		while (true)
+		{
+			yield return null;
+			if (!attackable)
+			{
+				yield return new WaitForSeconds(cooltime);
+				attackable = true;
+			}
+
 		}
 	}
 }
