@@ -15,6 +15,9 @@ public class Mover : MonoBehaviour
     public int ignoreLayer = 2;
     public int ignoreLayer2 = 6;
 
+    public string runBoolName = "Run";
+    public string idleBoolName = "Idle";
+
     [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
     public bool isEnemy = true;
@@ -27,6 +30,8 @@ public class Mover : MonoBehaviour
     bool isInvoking = false;
     Vector2 dir = Vector2.zero;
     Attacker attack;
+    Animator anim;
+    Collider2D myCol;
 
     void Move()
 	{
@@ -116,15 +121,18 @@ public class Mover : MonoBehaviour
 
     IEnumerator LerpMove()
 	{
+        anim.SetBool(runBoolName, true);
+        anim.SetBool(idleBoolName, false);
         Vector2 prevPos = transform.position;
         float t = 0;
         while (t < conDelay / 2)
 		{
             yield return null;
-            
             t += Time.deltaTime;
             transform.position = Vector3.Lerp(prevPos, currentPos, t / (conDelay / 2));
 		}
+        anim.SetBool(runBoolName, false);
+        anim.SetBool(idleBoolName, true);
         isInvoking = false;
         
     }
@@ -137,6 +145,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        anim = GetComponent<Animator>();
         attack = GetComponent<Attacker>();
 		if (isEnemy)
 		{
