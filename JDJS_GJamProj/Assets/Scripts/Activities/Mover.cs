@@ -28,7 +28,8 @@ public class Mover : MonoBehaviour
 
     void Move()
 	{
-        if (currentPos.x != targetPos.x)
+        
+        if (Mathf.Abs(currentPos.x - targetPos.x) >= Mathf.Abs(currentPos.y - targetPos.y))
         {
             if (currentPos.x > targetPos.x)
             {
@@ -46,8 +47,12 @@ public class Mover : MonoBehaviour
                     direction.eulerAngles = new Vector3(0, 0, 0);
                 }
             }
+            if (isEnemy)
+            {
+                direction.localPosition = dir;
+            }
         }
-        else if (currentPos.y != targetPos.y)
+        else if (Mathf.Abs(currentPos.x - targetPos.x) < Mathf.Abs(currentPos.y - targetPos.y))
         {
             if (currentPos.y > targetPos.y)
             {
