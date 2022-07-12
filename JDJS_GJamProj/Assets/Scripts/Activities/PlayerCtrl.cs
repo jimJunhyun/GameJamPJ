@@ -22,23 +22,23 @@ public class PlayerCtrl : MonoBehaviour
 		{
 			if (transform.localPosition == Vector3.down)
 			{
-				transform.localPosition = Vector2.left;
-				transform.eulerAngles = new Vector3(0, 0, 180);
-			}
-			else if (transform.localPosition == Vector3.left)
-			{
-				transform.localPosition = Vector2.up;
-				transform.eulerAngles = new Vector3(0, 0, 90);
-			}
-			else if (transform.localPosition == Vector3.up)
-			{
 				transform.localPosition = Vector2.right;
 				transform.eulerAngles = new Vector3(0, 0, 0);
 			}
-			else if (transform.localPosition == Vector3.right)
+			else if (transform.localPosition == Vector3.left)
 			{
 				transform.localPosition = Vector2.down;
 				transform.eulerAngles = new Vector3(0, 0, 270);
+			}
+			else if (transform.localPosition == Vector3.up)
+			{
+				transform.localPosition = Vector2.left;
+				transform.eulerAngles = new Vector3(0, 0, 180);
+			}
+			else if (transform.localPosition == Vector3.right)
+			{
+				transform.localPosition = Vector2.up;
+				transform.eulerAngles = new Vector3(0, 0, 90);
 			}
 		}
 		if (Input.GetMouseButtonDown(0) && attackable)
