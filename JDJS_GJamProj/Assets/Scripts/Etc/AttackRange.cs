@@ -7,7 +7,7 @@ public class AttackRange : MonoBehaviour
 	public string detectTag;
 	public int damage;
 
-	public bool damaged;
+	bool damaged;
 
 	HpObject target;
 	private void OnTriggerEnter2D(Collider2D collision)

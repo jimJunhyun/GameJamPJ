@@ -7,21 +7,28 @@ public class Attacker : MonoBehaviour
 {
     public AttackRange range;
     public Transform attPos;
-
-    public bool attackTrigger;
+	public GameObject warningRange;
+	public bool attackTrigger;
 
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
 	public Action attack;
+	
 
     void Attack()
 	{
-		
         range.transform.position = attPos.position;
         StartCoroutine(DelayOnOff());
 	}
 
     IEnumerator DelayOnOff()
 	{
+		if(warningRange != null)
+		{
+			warningRange.SetActive(true);
+			yield return new WaitForSeconds(0.1f);
+			warningRange.SetActive(false);
+		}
+		
         range.gameObject.SetActive(true);
 		yield return new WaitForSeconds(0.1f);
         range.gameObject.SetActive(false);
@@ -30,6 +37,8 @@ public class Attacker : MonoBehaviour
 	private void Awake()
 	{
 		attack = Attack;
+		warningRange = range.GetComponentInChildren<GameObject>();
+		warningRange.SetActive(false);
 		range.gameObject.SetActive(false);
 	}
 
