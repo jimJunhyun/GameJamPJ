@@ -16,7 +16,7 @@ public class PlayerCtrl : MonoBehaviour
 		StartCoroutine(Cooldown());
 	}
 
-	private void Update()
+    private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
