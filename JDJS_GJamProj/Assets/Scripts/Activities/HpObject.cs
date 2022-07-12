@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HpObject : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class HpObject : MonoBehaviour
 	public int currentHp;
     public Action<int> Damaged;
 	public string HitTriggerName = "Hit";
+	public UnityEvent OnHit;
 	[SerializeField] GameObject dropCoin;
+
 
 	Animator anim;
 
 	void HpDecrease(int dam)
 	{
+		OnHit.Invoke();
 		currentHp -= dam;
 		anim.SetTrigger(HitTriggerName);
 	}
