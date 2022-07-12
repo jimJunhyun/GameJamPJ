@@ -11,7 +11,12 @@ public class Mover : MonoBehaviour
     public bool stop = false;
 
     public Transform target;
-    
+
+    public int ignoreLayer = 2;
+    public int ignoreLayer2 = 6;
+
+    public string runBoolName = "Run";
+    public string idleBoolName = "Idle";
 
     [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
@@ -25,6 +30,8 @@ public class Mover : MonoBehaviour
     bool isInvoking = false;
     Vector2 dir = Vector2.zero;
     Attacker attack;
+    Animator anim;
+    Collider2D myCol;
 
     void Move()
 	{
@@ -75,9 +82,14 @@ public class Mover : MonoBehaviour
                 direction.localPosition = dir;
             }
         }
-        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f))
+        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, ignoreLayer))
 		{
             currentPos += dir;
+        }
+        Collider2D box = Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, 1 << 6);
+        if (box)
+        {
+            CameraManager.instance.MoveCMVcam(box.transform.parent.GetComponent<Transform>());
         }
     }
 
@@ -98,7 +110,6 @@ public class Mover : MonoBehaviour
 			{
 				if (isEnemy)
 				{
-                    
                     attack.attack.Invoke();
 				}
                 stop = false;
@@ -110,15 +121,18 @@ public class Mover : MonoBehaviour
 
     IEnumerator LerpMove()
 	{
+        anim.SetBool(runBoolName, true);
+        anim.SetBool(idleBoolName, false);
         Vector2 prevPos = transform.position;
         float t = 0;
         while (t < conDelay / 2)
 		{
             yield return null;
-            
             t += Time.deltaTime;
             transform.position = Vector3.Lerp(prevPos, currentPos, t / (conDelay / 2));
 		}
+        anim.SetBool(runBoolName, false);
+        anim.SetBool(idleBoolName, true);
         isInvoking = false;
         
     }
@@ -131,6 +145,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        anim = GetComponent<Animator>();
         attack = GetComponent<Attacker>();
 		if (isEnemy)
 		{
@@ -141,6 +156,8 @@ public class Mover : MonoBehaviour
         { 
             targetPos = target.position;
         }
+        ignoreLayer  = ~(1 << ignoreLayer) & ~(1<<ignoreLayer2);
+        
         StartCoroutine(DelayMove());
     }
 	private void Update()
