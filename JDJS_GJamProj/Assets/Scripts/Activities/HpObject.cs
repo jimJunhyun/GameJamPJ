@@ -6,22 +6,23 @@ using UnityEngine;
 public class HpObject : MonoBehaviour
 {
 	public int maxHp;
-	int currenthp;
+	[HideInInspector]
+	public int currentHp;
     public Action<int> Damaged;
 
 	void HpDecrease(int dam)
 	{
-		currenthp -= dam;
+		currentHp -= dam;
 	}
 
 	private void Awake()
 	{
-		currenthp = maxHp;
+		currentHp = maxHp;
 		Damaged = HpDecrease;
 	}
 	private void Update()
 	{
-		if(currenthp <= 0)
+		if(currentHp <= 0)
 		{
 			Destroy(gameObject);
 		}
