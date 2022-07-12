@@ -157,9 +157,7 @@ MonoBehaviour:
   maxHp: 20
   currentHp: 0
   HitTriggerName: Hit
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
+  dropCoin: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
 --- !u!114 &395588599078634467
 MonoBehaviour:
   m_ObjectHideFlags: 0
