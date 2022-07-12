@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameUIManager : MonoBehaviour
 {
     [SerializeField] Text stageText;
-    [SerializeField] Button StatusBT;
+    //[SerializeField] Button StatusBT;
     [SerializeField] GameObject StatusPanel;
     bool OntheStatus = false;
     
