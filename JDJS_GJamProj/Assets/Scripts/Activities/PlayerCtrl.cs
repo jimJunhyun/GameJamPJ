@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -48,7 +49,15 @@ public class PlayerCtrl : MonoBehaviour
 		}
 	}
 
-	IEnumerator Cooldown()
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Shop")
+        {
+			//상점패널 활성화
+        }
+    }
+
+    IEnumerator Cooldown()
 	{
 		while (true)
 		{
