@@ -10,10 +10,12 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] Image halfHeartImage = null;
     [SerializeField] Image emptyHeart = null;
     [SerializeField] Text stageText;
+    [SerializeField] Text coinCntTxt;
     //[SerializeField] Button StatusBT;
     [SerializeField] RectTransform StatusPanel;
     [SerializeField] RectTransform hpPanel;
     bool OntheStatus = false;
+    int coinCnt;
 
     int a = 5;
 
@@ -61,10 +63,6 @@ public class GameUIManager : MonoBehaviour
     }
     public void HitDmage(int hitBeforeHP)
     {
-        //if (hitBeforeHP % 2 == 1)
-
-
-
         Image heart = hitBeforeHP % 2 == 1 ?
             hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
         if (hitBeforeHP % 2 == 1)
@@ -75,7 +73,10 @@ public class GameUIManager : MonoBehaviour
         {
             heart.sprite = halfHeartImage.sprite;
         }
-
+    }
+    public void GetCoin()
+    {
+        coinCntTxt.text = $"{++coinCnt}";
     }
     //IEnumerator OnStatus()
     //{
