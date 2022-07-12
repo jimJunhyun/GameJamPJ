@@ -1690,6 +1690,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4025692142077460410, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025692142476530462, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025692142941881440, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5309752531999885058, guid: 83e72fc911596bb4aa4525852623b4e3, type: 3}
       propertyPath: m_ShapeTexture
       value: 

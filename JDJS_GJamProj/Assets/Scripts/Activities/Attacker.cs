@@ -25,7 +25,7 @@ public class Attacker : MonoBehaviour
 		if(warningRange != null)
 		{
 			warningRange.SetActive(true);
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.2f);
 			warningRange.SetActive(false);
 		}
 		
@@ -37,8 +37,11 @@ public class Attacker : MonoBehaviour
 	private void Awake()
 	{
 		attack = Attack;
-		warningRange = range.GetComponentInChildren<GameObject>();
-		warningRange.SetActive(false);
+		if(warningRange != null)
+		{
+			warningRange.SetActive(false);
+		}
+		
 		range.gameObject.SetActive(false);
 	}
 
