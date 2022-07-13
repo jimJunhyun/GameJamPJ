@@ -161,7 +161,11 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+  isPlayer: 0
 --- !u!114 &395588599078634467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,10 +178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a445249ca547a37469eb96b80a33da85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: {fileID: 395588600499845160}
+  range:
+  - {fileID: 395588600499845160}
   attPos: {fileID: 395588599831579239}
-  warningRange: {fileID: 3904076955422994149}
+  warningRange:
+  - {fileID: 3904076955422994149}
   attackTrigger: 0
+  preAttackWarn: 1
+  attackNo: 0
 --- !u!114 &395588599078634492
 MonoBehaviour:
   m_ObjectHideFlags: 0
