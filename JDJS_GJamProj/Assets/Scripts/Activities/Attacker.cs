@@ -8,7 +8,9 @@ public class Attacker : MonoBehaviour
     public List<AttackRange> range = new List<AttackRange>();
     public Transform attPos;
 	public List<GameObject> warningRange = new List<GameObject>();
+	public List<AudioClip> attackSound = new List<AudioClip>();
 	public bool attackTrigger;
+	public AudioSource attackAudioSource;
 
 	public bool preAttackWarn = true;
 
@@ -26,14 +28,21 @@ public class Attacker : MonoBehaviour
 
     IEnumerator DelayOnOff()
 	{
+		if (attackSound != null)
+		{
+			attackAudioSource.clip = attackSound[attackNo];
+			attackAudioSource.Play();
+		}
 		if (preAttackWarn)
 		{
+			
 			if (warningRange != null)
 			{
 				warningRange[attackNo].SetActive(true);
 				yield return new WaitForSeconds(0.2f);
 				warningRange[attackNo].SetActive(false);
 			}
+			
 
 			range[attackNo].gameObject.SetActive(true);
 			yield return new WaitForSeconds(0.1f);
