@@ -13,13 +13,18 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] Text coinCntTxt;
     //[SerializeField] Button StatusBT;
     [SerializeField] RectTransform StatusPanel;
-    [SerializeField] RectTransform hpPanel;
+    [SerializeField] RectTransform hpPanel; 
+    [SerializeField] Image Panel;
+    float time = 0;
+    float ftime = 1f;
     bool OntheStatus = false;
     int coinCnt;
+
 
 	private void Awake()
 	{
         instane = this;
+        StartCoroutine("Fade");
     }
 
 	void Start()
@@ -41,6 +46,20 @@ public class GameUIManager : MonoBehaviour
         {
             StatusPanel.gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator Fade()
+    {
+        Panel.gameObject.SetActive(true);
+        Color alpha = Panel.color;
+        while (alpha.a >= 0f)
+        {
+            time += Time.deltaTime / ftime;
+            alpha.a = Mathf.Lerp(1, 0, time);
+            Panel.color = alpha;
+            yield return null;
+        }
+        yield return null;
     }
     public void InitHpUI(int maxHP)
     {

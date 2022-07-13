@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637931916774424879
-    m_Hash: 3096603333
+      ticks: 637931987960850447
+    m_Hash: 1915332977
   m_LockFileStatus:
     m_FilePath: D:/GameJam/GameJamPJ/JDJS_GJamProj/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637931916774484652
-    m_Hash: 4101564335
+      ticks: 637931987960850447
+    m_Hash: 875401043
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
