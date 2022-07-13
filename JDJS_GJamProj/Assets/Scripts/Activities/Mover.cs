@@ -33,6 +33,7 @@ public class Mover : MonoBehaviour
     Attacker attack;
     Animator anim;
     SpriteRenderer sprite;
+    BoxCollider2D myCol;
 
     void Move()
 	{
@@ -42,7 +43,7 @@ public class Mover : MonoBehaviour
             
             if (currentPos.x > targetPos.x)
             {
-                dir = Vector2.left;
+                dir = Vector2.left * myCol.size.x;
                 sprite.flipX = true;
                 if (isEnemy)
                 {
@@ -51,7 +52,7 @@ public class Mover : MonoBehaviour
             }
             if (currentPos.x < targetPos.x)
             {
-                dir = Vector2.right;
+                dir = Vector2.right * myCol.size.x;
                 sprite.flipX = false;
                 if (isEnemy)
                 {
@@ -67,7 +68,7 @@ public class Mover : MonoBehaviour
         {
             if (currentPos.y > targetPos.y)
             {
-                dir = Vector2.down;
+                dir = Vector2.down * myCol.size.y;
                 sprite.flipX = true;
                 if (isEnemy)
                 {
@@ -76,7 +77,7 @@ public class Mover : MonoBehaviour
             }
             if (currentPos.y < targetPos.y)
             {
-                dir = Vector2.up;
+                dir = Vector2.up * myCol.size.y;
                 sprite.flipX = false;
                 if (isEnemy)
                 {
@@ -88,10 +89,9 @@ public class Mover : MonoBehaviour
                 direction.localPosition = dir;
             }
         }
-        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, ignoreLayer))
+        if (!Physics2D.OverlapBox(direction.position, myCol.size * 0.5f, 0f, ignoreLayer))
 		{
-            
-            currentPos += dir;
+            currentPos += dir / myCol.size.x;
         }
     }
 
@@ -131,8 +131,10 @@ public class Mover : MonoBehaviour
         anim.SetBool(idleBoolName, false);
         Vector2 prevPos = transform.position;
         float t = 0;
+        
         while (t < conDelay / 2)
 		{
+            
             yield return null;
             t += Time.deltaTime;
             transform.position = Vector3.Lerp(prevPos, currentPos, t / (conDelay / 2));
@@ -168,6 +170,7 @@ public class Mover : MonoBehaviour
 	// Start is called before the first frame update
 	void Awake()
     {
+        myCol = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         attack = GetComponent<Attacker>();
@@ -192,6 +195,7 @@ public class Mover : MonoBehaviour
         }
         if ((transform.position.x != currentPos.x || transform.position.y != currentPos.y) && !isInvoking)
         {
+            
             isInvoking = true;
             StartCoroutine(LerpMove());
         }

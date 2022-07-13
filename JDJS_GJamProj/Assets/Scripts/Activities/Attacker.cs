@@ -12,6 +12,8 @@ public class Attacker : MonoBehaviour
 
 	public bool preAttackWarn = true;
 
+	public bool isBoss = false;
+
 	public bool isRandomAttack = false;
 
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
@@ -20,9 +22,15 @@ public class Attacker : MonoBehaviour
 	[HideInInspector]
 	public int attackNo;
 
+	Animator anim;
+
     void Attack()
 	{
-        range[attackNo].transform.position = attPos[attackNo].position;
+		if (isRandomAttack)
+		{
+			attackNo = UnityEngine.Random.Range(0, range.Count);
+		}
+		range[attackNo].transform.position = attPos[attackNo].position;
         StartCoroutine(DelayOnOff());
 	}
 
@@ -30,6 +38,13 @@ public class Attacker : MonoBehaviour
 	{
 		if (preAttackWarn)
 		{
+			if (isBoss)
+			{
+				Debug.Log("!");
+				anim.SetInteger("BossAttacker", attackNo);
+				anim.SetBool("Attack", true);
+			}
+			
 			if (warningRange != null)
 			{
 				warningRange[attackNo].SetActive(true);
@@ -40,9 +55,21 @@ public class Attacker : MonoBehaviour
 			range[attackNo].gameObject.SetActive(true);
 			yield return new WaitForSeconds(0.1f);
 			range[attackNo].gameObject.SetActive(false);
+			if (isBoss)
+			{
+				anim.SetInteger("BossAttacker", -1);
+				anim.SetBool("Attack", false);
+				Debug.Log("??");
+			}
+			
 		}
 		else
 		{
+			if (isBoss)
+			{
+				anim.SetInteger("BossAttacker", attackNo);
+				anim.SetBool("Attack", true);
+			}
 			
 			range[attackNo].gameObject.SetActive(true);
 			yield return new WaitForSeconds(0.25f);
@@ -53,11 +80,18 @@ public class Attacker : MonoBehaviour
 				yield return new WaitForSeconds(0.1f);
 				warningRange[attackNo].SetActive(false);
 			}
+			if (isBoss)
+			{
+				anim.SetInteger("BossAttacker", -1);
+				anim.SetBool("Attack", false);
+			}
+			
 		}
 	}
 
 	private void Awake()
 	{
+		anim = GetComponent<Animator>();
 		attack = Attack;
 		for (int i = 0; i < warningRange.Count; i++)
 		{
@@ -72,10 +106,7 @@ public class Attacker : MonoBehaviour
 
 	private void Update()
 	{
-		if (isRandomAttack)
-		{
-			attackNo = UnityEngine.Random.Range(0, range.Count);
-		}
+		
 		if (Input.GetKeyDown(KeyCode.R) && !isRandomAttack)
 		{
 			attackNo += 1;
@@ -86,6 +117,7 @@ public class Attacker : MonoBehaviour
 		}
 		if (attackTrigger)
 		{
+			
 			attackTrigger = false;
 			Attack();
 		}

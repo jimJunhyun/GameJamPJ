@@ -4007,6 +4007,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1613639605}
+    - target: {fileID: 7647270673558104697, guid: 875d6f52ac57d9d48981abc1b771eee3, type: 3}
+      propertyPath: dirMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5235867673597083731, guid: 875d6f52ac57d9d48981abc1b771eee3, type: 3}
     - {fileID: 5235867673597083726, guid: 875d6f52ac57d9d48981abc1b771eee3, type: 3}
