@@ -2,14 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Attacker : MonoBehaviour
 {
     public List<AttackRange> range = new List<AttackRange>();
     public Transform attPos;
 	public List<GameObject> warningRange = new List<GameObject>();
 	public bool attackTrigger;
-
 	public bool preAttackWarn = true;
 
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]

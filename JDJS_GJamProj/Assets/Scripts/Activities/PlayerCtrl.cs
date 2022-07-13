@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Audio;
 public class PlayerCtrl : MonoBehaviour
 {
 	public float cooltime = 0.5f;
@@ -14,10 +14,13 @@ public class PlayerCtrl : MonoBehaviour
 	ShopDetect detect;
 	Attacker myAtt;
 	Vector2 dir;
+
 	bool attackable = true;
+
 
 	private void Awake()
 	{
+
 		//ShopPanel.SetActive(false);
 		detect = GetComponent<ShopDetect>();
 		myAtt = GetComponent<Attacker>();

@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            CoinManager.Instance.GetCoins();
             CoinManager.Instance.coinNum +=  value;
             Destroy(gameObject);
         }
