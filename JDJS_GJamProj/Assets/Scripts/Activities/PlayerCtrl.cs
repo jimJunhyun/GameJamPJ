@@ -6,20 +6,16 @@ using UnityEngine.SceneManagement;
 public class PlayerCtrl : MonoBehaviour
 {
 	public float cooltime = 0.5f;
+	public GameObject ShopPanel;
 	
 	Attacker myAtt;
 	Vector2 dir;
 	bool attackable = true;
-	ShopDetect detecter;
-
-	List<Mover> stageEnemys = new List<Mover>();
-	Transform currentStage;
 
 	private void Awake()
 	{
-		currentStage = GameObject.Find("Map1").GetComponent<Transform>();
+		//ShopPanel.SetActive(false);
 		myAtt = GetComponent<Attacker>();
-		detecter = GetComponent<ShopDetect>();
 		StartCoroutine(Cooldown());
 	}
 
@@ -48,31 +44,10 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 90);
 			}
 		}
-		if (Input.GetMouseButtonDown(0) && attackable && !detecter.shopping)
+		if (Input.GetMouseButtonDown(0) && attackable)
 		{
 			myAtt.attackTrigger = true;
 			attackable = false;
-		}
-		Collider2D box = Physics2D.OverlapBox(transform.position, Vector2.one * 0.5f, 0f, 1 << 6);
-		if (box)
-		{
-			//if(currentStage != null)
-			//{
-			//	currentStage.GetComponentsInChildren<Mover>(stageEnemys);
-			//	for (int i = 0; i < stageEnemys.Count; i++)
-			//	{
-			//		stageEnemys[i].direction.gameObject.SetActive(false);
-			//		stageEnemys[i].enabled = false;
-			//	}
-			//}
-			currentStage = box.transform.parent.GetComponent<Transform>();
-			CameraManager.instance.MoveCMVcam(currentStage);
-			//currentStage.GetComponentsInChildren<Mover>(stageEnemys);
-			//for (int i = 0; i < stageEnemys.Count; i++)
-			//{
-			//	stageEnemys[i].direction.gameObject.SetActive(true);
-			//	stageEnemys[i].enabled = true;
-			//}
 		}
 	}
 
