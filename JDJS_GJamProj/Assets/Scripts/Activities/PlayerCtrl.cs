@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class PlayerCtrl : MonoBehaviour
 {
 	public float cooltime = 0.5f;
-	public GameObject ShopPanel;
 	
 	Attacker myAtt;
 	Vector2 dir;
 	bool attackable = true;
+	ShopDetect detecter;
 
 	private void Awake()
 	{
-		ShopPanel.SetActive(false);
 		myAtt = GetComponent<Attacker>();
+		detecter = GetComponent<ShopDetect>();
 		StartCoroutine(Cooldown());
 	}
 
@@ -44,7 +44,7 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 90);
 			}
 		}
-		if (Input.GetMouseButtonDown(0) && attackable)
+		if (Input.GetMouseButtonDown(0) && attackable && !detecter.shopping)
 		{
 			myAtt.attackTrigger = true;
 			attackable = false;
