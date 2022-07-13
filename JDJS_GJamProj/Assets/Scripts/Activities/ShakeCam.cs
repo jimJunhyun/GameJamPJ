@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ShakeCam : MonoBehaviour
 {
     public float shakeStrength;
-	public Vector2 shakeLimit;
+	public float shakeTime;
 	bool invoking = false;
-    public void Shake()
+	public CinemachineBasicMultiChannelPerlin noise;
+	CinemachineVirtualCamera cmvCam;
+
+	private void Awake()
+	{
+		cmvCam = GetComponent<CinemachineVirtualCamera>();
+		noise = cmvCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+	}
+	public void Shake()
 	{
 		if(!invoking)
 			StartCoroutine(Shaker());
@@ -15,23 +24,9 @@ public class ShakeCam : MonoBehaviour
 	IEnumerator Shaker()
 	{
 		invoking = true;
-		Vector3 startPos = transform.position;
-		for (int i = 0; i < 100; i++)
-		{
-			yield return null;
-			Vector3 shakeOffset = Random.insideUnitCircle * shakeStrength;
-			if(transform.position.x + shakeOffset.x > startPos.x + shakeLimit.x || transform.position.x - shakeOffset.x < startPos.x - shakeLimit.x)
-			{
-				shakeOffset.x = 0;
-			}
-			if (transform.position.y + shakeOffset.y> startPos.y + shakeLimit.y || transform.position.y - shakeOffset.y < startPos.y - shakeLimit.y)
-			{
-				shakeOffset.y = 0;
-			}
-			transform.position += shakeOffset;
-		}
-
-		transform.position = startPos;
+		noise.m_AmplitudeGain = shakeStrength;
+		yield return new WaitForSeconds(shakeTime);
+		noise.m_AmplitudeGain  =0f;
 		invoking = false;
 	}
 }
