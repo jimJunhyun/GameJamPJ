@@ -88,9 +88,9 @@ public class GameUIManager : MonoBehaviour
             heart.sprite = halfHeartImage.sprite;
         }
     }
-    public void GetCoin()
+    public void CoinUIUpdate(int val)
     {
-        coinCntTxt.text = $"{++coinCnt}";
+        coinCntTxt.text = $"{val}";
     }
     //IEnumerator OnStatus()
     //{

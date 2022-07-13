@@ -10,6 +10,8 @@ public class PlayerCtrl : MonoBehaviour
 	public GameObject ShopPanel;
 	public Text stageText;
 	
+	Transform currentStage;
+	ShopDetect detect;
 	Attacker myAtt;
 	Vector2 dir;
 	bool attackable = true;
@@ -17,6 +19,7 @@ public class PlayerCtrl : MonoBehaviour
 	private void Awake()
 	{
 		//ShopPanel.SetActive(false);
+		detect = GetComponent<ShopDetect>();
 		myAtt = GetComponent<Attacker>();
 		StartCoroutine(Cooldown());
 	}
@@ -46,7 +49,7 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 90);
 			}
 		}
-		if (Input.GetMouseButtonDown(0) && attackable)
+		if (Input.GetMouseButtonDown(0) && attackable && !detect.shopping)
 		{
 			myAtt.attackTrigger = true;
 			attackable = false;
