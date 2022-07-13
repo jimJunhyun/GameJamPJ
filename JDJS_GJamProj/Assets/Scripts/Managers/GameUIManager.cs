@@ -15,6 +15,12 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] RectTransform StatusPanel;
     [SerializeField] RectTransform hpPanel; 
     [SerializeField] Image Panel;
+    [SerializeField] Text ATK;
+    [SerializeField] Text ASPD;
+    [SerializeField] Text SPD;
+
+    AttackRange attackRange;
+    PlayerCtrl attackSpeed;
     float time = 0;
     float ftime = 1f;
     bool OntheStatus = false;
@@ -38,9 +44,11 @@ public class GameUIManager : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
         //string message = mousePos.ToString();
         //Debug.Log(message);
-        if (mousePos.x <= 1890 && mousePos.x >= 1650 && mousePos.y >= 31.8 && mousePos.y <= 77.6)
+        if (mousePos.x <= 1919 && mousePos.x >= 1719 && mousePos.y >= 31.8 && mousePos.y <= 77.6)
         {
             StatusPanel.gameObject.SetActive(true);
+            //ATK.text = "ATK : " + attackRange.damage;
+            //ASPD.text = "ASPD : " + attackSpeed.cooltime;
         }
         else
         {
