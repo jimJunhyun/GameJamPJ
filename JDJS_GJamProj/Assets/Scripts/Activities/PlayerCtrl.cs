@@ -12,8 +12,12 @@ public class PlayerCtrl : MonoBehaviour
 	bool attackable = true;
 	ShopDetect detecter;
 
+	List<Mover> stageEnemys = new List<Mover>();
+	Transform currentStage;
+
 	private void Awake()
 	{
+		currentStage = GameObject.Find("Map1").GetComponent<Transform>();
 		myAtt = GetComponent<Attacker>();
 		detecter = GetComponent<ShopDetect>();
 		StartCoroutine(Cooldown());
@@ -48,6 +52,27 @@ public class PlayerCtrl : MonoBehaviour
 		{
 			myAtt.attackTrigger = true;
 			attackable = false;
+		}
+		Collider2D box = Physics2D.OverlapBox(transform.position, Vector2.one * 0.5f, 0f, 1 << 6);
+		if (box)
+		{
+			//if(currentStage != null)
+			//{
+			//	currentStage.GetComponentsInChildren<Mover>(stageEnemys);
+			//	for (int i = 0; i < stageEnemys.Count; i++)
+			//	{
+			//		stageEnemys[i].direction.gameObject.SetActive(false);
+			//		stageEnemys[i].enabled = false;
+			//	}
+			//}
+			currentStage = box.transform.parent.GetComponent<Transform>();
+			CameraManager.instance.MoveCMVcam(currentStage);
+			//currentStage.GetComponentsInChildren<Mover>(stageEnemys);
+			//for (int i = 0; i < stageEnemys.Count; i++)
+			//{
+			//	stageEnemys[i].direction.gameObject.SetActive(true);
+			//	stageEnemys[i].enabled = true;
+			//}
 		}
 	}
 

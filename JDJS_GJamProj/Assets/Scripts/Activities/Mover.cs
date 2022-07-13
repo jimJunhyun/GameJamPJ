@@ -91,11 +91,6 @@ public class Mover : MonoBehaviour
 		{
             currentPos += dir;
         }
-        Collider2D box = Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, 1 << 6);
-        if (box)
-        {
-            CameraManager.instance.MoveCMVcam(box.transform.parent.GetComponent<Transform>());
-        }
     }
 
     private void OnDrawGizmos()
@@ -110,17 +105,20 @@ public class Mover : MonoBehaviour
         while (true)
 		{
             yield return new WaitForSeconds(conDelay);
-            
-			if (stop)
+            if(target != null)
 			{
-				if (isEnemy)
-				{
-                    attack.attack.Invoke();
-				}
-                stop = false;
-                continue;
-			}
-            Move();
+                if (stop)
+                {
+                    if (isEnemy)
+                    {
+                        attack.attack.Invoke();
+                    }
+                    stop = false;
+                    continue;
+                }
+                Move();
+            }
+			
 		}
 	}
 
@@ -147,18 +145,35 @@ public class Mover : MonoBehaviour
         return Mathf.Abs(a - b) < err;
 	}
 
-    // Start is called before the first frame update
-    void Awake()
+	private void OnBecameVisible()
+	{
+		if (isEnemy)
+		{
+            Debug.Log("VISIBLE  " + transform.name);
+            target = GameObject.Find("Player").transform;
+        }
+        
+        
+	}
+
+	private void OnBecameInvisible()
+	{
+        Debug.Log("InVISIBLE  " + transform.name);
+        target = null;
+	}
+
+	// Start is called before the first frame update
+	void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         attack = GetComponent<Attacker>();
-		if (isEnemy)
-		{
-            target = GameObject.Find("Player").transform;
-		}
+		//if (isEnemy)
+		//{
+  //          target = GameObject.Find("Player").transform;
+		//}
         currentPos = transform.position;
-        if(targetPos != null)
+        if(targetPos != null && target != null)
         { 
             targetPos = target.position;
         }
@@ -168,7 +183,7 @@ public class Mover : MonoBehaviour
     }
 	private void Update()
 	{
-        if (targetPos != null)
+        if (targetPos != null && target != null)
 		{
             targetPos = target.position;
         }

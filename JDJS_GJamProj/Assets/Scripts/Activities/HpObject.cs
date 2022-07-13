@@ -21,7 +21,11 @@ public class HpObject : MonoBehaviour
 
 	void HpDecrease(int dam)
 	{
-		GameUIManager.instane.HitDmage(currentHp);
+		if (isPlayer)
+		{
+			GameUIManager.instane.HitDmage(currentHp);
+		}
+		
 		OnHit.Invoke();
 		currentHp -= dam;
 		
