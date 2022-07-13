@@ -14,7 +14,7 @@ public class PlayerCtrl : MonoBehaviour
 
 	private void Awake()
 	{
-		ShopPanel.SetActive(false);
+		//ShopPanel.SetActive(false);
 		myAtt = GetComponent<Attacker>();
 		StartCoroutine(Cooldown());
 	}
