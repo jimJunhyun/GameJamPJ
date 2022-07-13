@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Enemy
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &978061748518882661
 GameObject:
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Enemy
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &1313723847103270513
 GameObject:
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Enemy
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &5814830466620317929
 GameObject:
@@ -1223,7 +1223,8 @@ MonoBehaviour:
   - {fileID: 763568783239062467}
   - {fileID: 8877138781151181807}
   - {fileID: 6894532154712898333}
-  attPos: {fileID: 8076858744202109981}
+  attPos:
+  - {fileID: 0}
   warningRange:
   - {fileID: 1313723847103270513}
   - {fileID: 8753622000902753190}
@@ -1231,6 +1232,8 @@ MonoBehaviour:
   - {fileID: 8298250013285169643}
   attackTrigger: 0
   preAttackWarn: 0
+  isBoss: 0
+  isRandomAttack: 0
   attackNo: 0
 --- !u!114 &3281810647819296056
 MonoBehaviour:
@@ -1376,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Enemy
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &8076858745768030981
 GameObject:

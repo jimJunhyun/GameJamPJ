@@ -40,7 +40,6 @@ public class Attacker : MonoBehaviour
 		{
 			if (isBoss)
 			{
-				Debug.Log("!");
 				anim.SetInteger("BossAttacker", attackNo);
 				anim.SetBool("Attack", true);
 			}
@@ -50,6 +49,7 @@ public class Attacker : MonoBehaviour
 				warningRange[attackNo].SetActive(true);
 				yield return new WaitForSeconds(0.2f);
 				warningRange[attackNo].SetActive(false);
+				yield return new WaitForSeconds(0.5f);
 			}
 
 			range[attackNo].gameObject.SetActive(true);
@@ -59,7 +59,6 @@ public class Attacker : MonoBehaviour
 			{
 				anim.SetInteger("BossAttacker", -1);
 				anim.SetBool("Attack", false);
-				Debug.Log("??");
 			}
 			
 		}
