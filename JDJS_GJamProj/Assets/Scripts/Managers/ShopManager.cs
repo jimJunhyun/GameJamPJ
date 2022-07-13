@@ -23,7 +23,7 @@ public class ShopManager : MonoBehaviour
     
     GameObject player;
     Mover playerMover;
-    AttackRange playerAttack;
+    List<AttackRange> playerAttack = new List<AttackRange>();
     PlayerCtrl playerCont;
     HpObject playerHp;
     
@@ -33,7 +33,11 @@ public class ShopManager : MonoBehaviour
 		{
             CoinManager.Instance.coinNum -= redVal;
             bigRedPotion.SetActive(false);
-            playerAttack.damage += 1;
+			for (int i = 0; i < playerAttack.Count; i++)
+			{
+                playerAttack[i].damage += 1;
+            }
+            
         }
         
     }
