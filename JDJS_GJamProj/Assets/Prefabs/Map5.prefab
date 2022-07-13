@@ -371,7 +371,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -531,7 +531,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -570,8 +570,10 @@ Tilemap:
     m_Data: {fileID: 5431296766036467766, guid: 05bbf7c40140576498d77a070dd6707c, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: -1747295740152761478, guid: 05bbf7c40140576498d77a070dd6707c, type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 2702172060173518170, guid: 05bbf7c40140576498d77a070dd6707c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -580,8 +582,6 @@ Tilemap:
     m_Data: {fileID: 5431296766036467766, guid: 84924b21021373c4fadec6befac049e3, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 4832305372510486946, guid: 84924b21021373c4fadec6befac049e3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 4483331102382818611, guid: 05bbf7c40140576498d77a070dd6707c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 36
     m_Data:
@@ -2834,6 +2834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6973395413138514177}
   - component: {fileID: 6973395413138514178}
+  - component: {fileID: 312562230}
   m_Layer: 0
   m_Name: Map5
   m_TagString: Untagged
@@ -2875,6 +2876,19 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &312562230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973395413138514179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fab12a2930cd442895723d3ebd1b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stagedata: 5
 --- !u!1001 &6973395411260017714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2962,11 +2976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 395588599698473675, guid: 0cb7f3948e1d0cb4f981f7325e844d86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.49
+      value: 38.5
       objectReference: {fileID: 0}
     - target: {fileID: 395588599698473675, guid: 0cb7f3948e1d0cb4f981f7325e844d86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.46
+      value: -13.51
       objectReference: {fileID: 0}
     - target: {fileID: 395588599698473675, guid: 0cb7f3948e1d0cb4f981f7325e844d86, type: 3}
       propertyPath: m_LocalPosition.z

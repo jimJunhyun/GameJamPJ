@@ -31,6 +31,7 @@ public class ShopManager : MonoBehaviour
     {
         if(redVal <= CoinManager.Instance.coinNum)
 		{
+            CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= redVal;
             bigRedPotion.SetActive(false);
 			for (int i = 0; i < playerAttack.Count; i++)
@@ -45,6 +46,7 @@ public class ShopManager : MonoBehaviour
     {
         if (blueVal <= CoinManager.Instance.coinNum)
         {
+            CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= blueVal;
             bigBluePotion.SetActive(false);
             playerCont.cooltime -= 0.25f;
@@ -55,6 +57,7 @@ public class ShopManager : MonoBehaviour
     {
         if (greenVal <= CoinManager.Instance.coinNum)
         {
+            CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= greenVal;
             bigGreenPotion.SetActive(false);
             playerHp.maxHp += 2;
@@ -65,6 +68,7 @@ public class ShopManager : MonoBehaviour
     {
         if (yellowVal <= CoinManager.Instance.coinNum)
         {
+            CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= yellowVal;
             bigYellowPotion.SetActive(false);
             playerMover.conDelay -= 0.25f;
