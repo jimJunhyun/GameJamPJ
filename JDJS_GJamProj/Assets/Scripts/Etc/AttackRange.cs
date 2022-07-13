@@ -7,6 +7,7 @@ public class AttackRange : MonoBehaviour
 	public string detectTag;
 	public int damage;
 
+	[SerializeField]
 	bool damaged;
 
 	HpObject target;

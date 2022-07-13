@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    public GameObject ShopPanel;
     public Vector2 currentPos;
     public Vector2 targetPos;
     
@@ -31,16 +32,19 @@ public class Mover : MonoBehaviour
     Vector2 dir = Vector2.zero;
     Attacker attack;
     Animator anim;
-    Collider2D myCol;
+    SpriteRenderer sprite;
+    BoxCollider2D myCol;
 
     void Move()
 	{
         
         if (Mathf.Abs(currentPos.x - targetPos.x) >= Mathf.Abs(currentPos.y - targetPos.y))
         {
+            
             if (currentPos.x > targetPos.x)
             {
-                dir = Vector2.left;
+                dir = Vector2.left * myCol.size.x;
+                sprite.flipX = true;
                 if (isEnemy)
                 {
                     direction.eulerAngles = new Vector3(0, 0, 180);
@@ -48,7 +52,8 @@ public class Mover : MonoBehaviour
             }
             if (currentPos.x < targetPos.x)
             {
-                dir = Vector2.right;
+                dir = Vector2.right * myCol.size.x;
+                sprite.flipX = false;
                 if (isEnemy)
                 {
                     direction.eulerAngles = new Vector3(0, 0, 0);
@@ -63,7 +68,8 @@ public class Mover : MonoBehaviour
         {
             if (currentPos.y > targetPos.y)
             {
-                dir = Vector2.down;
+                dir = Vector2.down * myCol.size.y;
+                sprite.flipX = true;
                 if (isEnemy)
                 {
                     direction.eulerAngles = new Vector3(0, 0, 270);
@@ -71,7 +77,8 @@ public class Mover : MonoBehaviour
             }
             if (currentPos.y < targetPos.y)
             {
-                dir = Vector2.up;
+                dir = Vector2.up * myCol.size.y;
+                sprite.flipX = false;
                 if (isEnemy)
                 {
                     direction.eulerAngles = new Vector3(0, 0, 90);
@@ -82,18 +89,13 @@ public class Mover : MonoBehaviour
                 direction.localPosition = dir;
             }
         }
-        if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, ignoreLayer))
+        if (!Physics2D.OverlapBox(direction.position, myCol.size * 0.5f, 0f, ignoreLayer))
 		{
-            currentPos += dir;
-        }
-        Collider2D box = Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, 1 << 6);
-        if (box)
-        {
-            CameraManager.instance.MoveCMVcam(box.transform.parent.GetComponent<Transform>());
+            currentPos += dir / myCol.size.x;
         }
     }
 
-	private void OnDrawGizmos()
+    private void OnDrawGizmos()
 	{
 		Gizmos.DrawWireCube(direction.position, Vector2.one * 0.5f);
 	}
@@ -105,17 +107,21 @@ public class Mover : MonoBehaviour
         while (true)
 		{
             yield return new WaitForSeconds(conDelay);
-            
-			if (stop)
+            if(target != null)
 			{
-				if (isEnemy)
-				{
-                    attack.attack.Invoke();
-				}
-                stop = false;
-                continue;
-			}
-            Move();
+                
+                if (stop)
+                {
+                    if (isEnemy)
+                    {
+                        attack.attack.Invoke();
+                    }
+                    stop = false;
+                    continue;
+                }
+                Move();
+            }
+			
 		}
 	}
 
@@ -125,8 +131,10 @@ public class Mover : MonoBehaviour
         anim.SetBool(idleBoolName, false);
         Vector2 prevPos = transform.position;
         float t = 0;
+        
         while (t < conDelay / 2)
 		{
+            
             yield return null;
             t += Time.deltaTime;
             transform.position = Vector3.Lerp(prevPos, currentPos, t / (conDelay / 2));
@@ -142,17 +150,36 @@ public class Mover : MonoBehaviour
         return Mathf.Abs(a - b) < err;
 	}
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        anim = GetComponent<Animator>();
-        attack = GetComponent<Attacker>();
+	private void OnBecameVisible()
+	{
 		if (isEnemy)
 		{
+            Debug.Log("VISIBLE  " + transform.name);
             target = GameObject.Find("Player").transform;
-		}
+        }
+        
+        
+	}
+
+	private void OnBecameInvisible()
+	{
+        Debug.Log("InVISIBLE  " + transform.name);
+        target = null;
+	}
+
+	// Start is called before the first frame update
+	void Awake()
+    {
+        myCol = GetComponent<BoxCollider2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        attack = GetComponent<Attacker>();
+		//if (isEnemy)
+		//{
+  //          target = GameObject.Find("Player").transform;
+		//}
         currentPos = transform.position;
-        if(targetPos != null)
+        if(targetPos != null && target != null)
         { 
             targetPos = target.position;
         }
@@ -162,12 +189,13 @@ public class Mover : MonoBehaviour
     }
 	private void Update()
 	{
-        if (targetPos != null)
+        if (targetPos != null && target != null)
 		{
             targetPos = target.position;
         }
         if ((transform.position.x != currentPos.x || transform.position.y != currentPos.y) && !isInvoking)
         {
+            
             isInvoking = true;
             StartCoroutine(LerpMove());
         }

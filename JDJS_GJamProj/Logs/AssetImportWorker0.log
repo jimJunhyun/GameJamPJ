@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/user/Documents/GitHub/GameJamPJ/JDJS_GJamProj
+D:/GameJam/GameJamPJ/JDJS_GJamProj
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54198
-Successfully changed project path to: C:/Users/user/Documents/GitHub/GameJamPJ/JDJS_GJamProj
-C:/Users/user/Documents/GitHub/GameJamPJ/JDJS_GJamProj
+58922
+Successfully changed project path to: D:/GameJam/GameJamPJ/JDJS_GJamProj
+D:/GameJam/GameJamPJ/JDJS_GJamProj
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 255.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/GameJamPJ/JDJS_GJamProj/Assets
+[Subsystems] Discovering subsystems at path D:/GameJam/GameJamPJ/JDJS_GJamProj/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -35,165 +35,92 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001409 seconds.
+Registered in 0.004943 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.89 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 312.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.505 seconds
+- Completed reload, in  2.501 seconds
 Domain Reload Profiling:
-	ReloadAssembly (505ms)
-		BeginReloadAssembly (59ms)
+	ReloadAssembly (2502ms)
+		BeginReloadAssembly (282ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (385ms)
-			LoadAssemblies (57ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (1919ms)
+			LoadAssemblies (274ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (112ms)
+			SetupTypeCache (526ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (159ms)
+			RebuildScriptCaches (113ms)
+			SetupLoadedEditorAssemblies (865ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (55ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (63ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (313ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (350ms)
+				ProcessInitializeOnLoadMethodAttributes (108ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005064 seconds.
+Registered in 0.017113 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000143FF474820 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAF97A30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF10A010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FA7AA980 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEBD4C30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014220A3A030 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF12EC20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF12EC20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF18F5B0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF143C20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF043220 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF12EC20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAB93770 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF50EA30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEBD4C30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF18F5B0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF143C20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF143C20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAF66410 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF143C20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF75A020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF6850B0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF76BC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEAC9F00 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB4B9740 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF6850B0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAEBBBE0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB1C7E30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF7DCC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142205030F0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAEF4010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF701020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF12EC20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FACF1010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143D0628CF0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF12EC20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB4B9740 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB1C7E30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.14 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 282.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.952 seconds
+- Completed reload, in  4.725 seconds
 Domain Reload Profiling:
-	ReloadAssembly (955ms)
-		BeginReloadAssembly (132ms)
+	ReloadAssembly (4728ms)
+		BeginReloadAssembly (577ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (16ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (766ms)
-			LoadAssemblies (96ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (3937ms)
+			LoadAssemblies (428ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (220ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (318ms)
+			SetupTypeCache (1205ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (227ms)
+			SetupLoadedEditorAssemblies (1635ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (54ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (172ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (283ms)
+				BeforeProcessingInitializeOnLoad (340ms)
+				ProcessInitializeOnLoadAttributes (902ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
+				AfterProcessingInitializeOnLoad (27ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.28 seconds
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 107.8 MB.
-System memory in use after: 107.8 MB.
+Unloading 2395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.7 MB.
+System memory in use after: 105.7 MB.
 
-Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 2826.
-Total: 2.980300 ms (FindLiveObjects: 0.150100 ms CreateObjectMapping: 0.066100 ms MarkObjects: 2.546600 ms  DeleteObjects: 0.216800 ms)
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 2838.
+Total: 3.681400 ms (FindLiveObjects: 0.233000 ms CreateObjectMapping: 0.048000 ms MarkObjects: 3.231300 ms  DeleteObjects: 0.168000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -208,194 +135,55 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Map1.prefab
-  artifactKey: Guid(83e72fc911596bb4aa4525852623b4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Map1.prefab using Guid(83e72fc911596bb4aa4525852623b4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cee1a526115dfb25ad4ab569a2d1085') in 0.117382 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000456 seconds.
-  path: Assets/Prefabs/Coin.prefab
-  artifactKey: Guid(b75a4d7d622531f42a0c293a1731af8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Coin.prefab using Guid(b75a4d7d622531f42a0c293a1731af8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '229c0af7bd94f9444ead679efda8d84a') in 0.022871 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.833059 seconds.
-  path: Assets/Prefabs/Map9.prefab
-  artifactKey: Guid(65c7afa4452af5e4da60c6140dfe0fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Map9.prefab using Guid(65c7afa4452af5e4da60c6140dfe0fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19e3e0e372fcb3a63dab8648b0314704') in 0.036751 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.519764 seconds.
-  path: Assets/Prefabs/ShopTrigger.prefab
-  artifactKey: Guid(71d628c217cc48143a1cb520fca9ff53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/ShopTrigger.prefab using Guid(71d628c217cc48143a1cb520fca9ff53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32eb6c09ef1fef74418c53af6c2359f6') in 0.017849 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.677802 seconds.
-  path: Assets/Prefabs/Map5.prefab
-  artifactKey: Guid(e99360d81ee64ef4db4c5ce44c25cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Map5.prefab using Guid(e99360d81ee64ef4db4c5ce44c25cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5675e0b7f1db800a1a23e5c3c7bc60f') in 0.036435 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.439286 seconds.
-  path: Assets/Materials/Color
-  artifactKey: Guid(8426750d4f401d14ab9efd17bb0f891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color using Guid(8426750d4f401d14ab9efd17bb0f891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57676b8ad8f227a27037c3be7c13f0bc') in 0.012537 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.036207 seconds.
-  path: Assets/Scenes/Play.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Play.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffc3db7f4f0d643e9491fd8533541d7') in 0.014090 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.2 MB.
-System memory in use after: 65.3 MB.
-
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2833.
-Total: 3.283000 ms (FindLiveObjects: 0.141400 ms CreateObjectMapping: 0.052800 ms MarkObjects: 2.935600 ms  DeleteObjects: 0.152600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 25.319721 seconds.
-  path: Assets/Prefabs/Enemy.prefab
-  artifactKey: Guid(d41776cfe2269de4a85453ee1335a013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy.prefab using Guid(d41776cfe2269de4a85453ee1335a013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8d89feb7a14ff2a8a05443855f16dc') in 0.022304 seconds 
+  path: Assets/Sound/Audio Assets
+  artifactKey: Guid(ea2eb8d025672944daa6166c1c45f5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Audio Assets using Guid(ea2eb8d025672944daa6166c1c45f5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7724f47e31020b9396413df259b872') in 0.020025 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004693 seconds.
+Registered in 0.013359 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000014223FF1330 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422413D5E0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF1F4020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224411450 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAEE0610 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014223A26030 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142209A4020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB0C0430 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142209A4020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142240E6930 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB0D8C40 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422097C8C0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF1F4020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB15EA60 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAEE0610 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422097C8C0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422025DC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142240BE910 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAB92850 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422025DC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014221CE0080 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014223810220 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB027010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEAC8CB0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224633E80 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014223810220 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB027010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142239188D0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB027010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB2BC010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422400C600 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF300020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FACDFA20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224007760 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143D0629600 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB154C30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB4B9740 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014222C9A640 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.847 seconds
+- Completed reload, in  3.862 seconds
 Domain Reload Profiling:
-	ReloadAssembly (847ms)
-		BeginReloadAssembly (103ms)
+	ReloadAssembly (3863ms)
+		BeginReloadAssembly (431ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (19ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (689ms)
-			LoadAssemblies (92ms)
+			CreateAndSetChildDomain (136ms)
+		EndReloadAssembly (3228ms)
+			LoadAssemblies (367ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (248ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (250ms)
+			SetupTypeCache (1087ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (123ms)
+			SetupLoadedEditorAssemblies (1355ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (168ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (340ms)
+				ProcessInitializeOnLoadAttributes (914ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (28ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (40ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2378 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 110.8 MB.
-System memory in use after: 110.9 MB.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.6 MB.
+System memory in use after: 105.7 MB.
 
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2835.
-Total: 2.747400 ms (FindLiveObjects: 0.143000 ms CreateObjectMapping: 0.052100 ms MarkObjects: 2.329600 ms  DeleteObjects: 0.222300 ms)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2840.
+Total: 11.963700 ms (FindLiveObjects: 0.509300 ms CreateObjectMapping: 0.271800 ms MarkObjects: 10.697400 ms  DeleteObjects: 0.482500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -409,132 +197,109 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 12.310902 seconds.
-  path: Assets/Prefabs/Enemy.prefab
-  artifactKey: Guid(d41776cfe2269de4a85453ee1335a013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy.prefab using Guid(d41776cfe2269de4a85453ee1335a013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a426a19b0f545df49df5000305c8b0b') in 0.060332 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013860 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.190 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4192ms)
+		BeginReloadAssembly (438ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (29ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (106ms)
+		EndReloadAssembly (3504ms)
+			LoadAssemblies (400ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1185ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (189ms)
+			SetupLoadedEditorAssemblies (1387ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (379ms)
+				ProcessInitializeOnLoadAttributes (890ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (30ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (35ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.7 MB.
+System memory in use after: 105.7 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2842.
+Total: 12.072000 ms (FindLiveObjects: 0.402100 ms CreateObjectMapping: 0.181600 ms MarkObjects: 10.924500 ms  DeleteObjects: 0.560500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005485 seconds.
+Registered in 0.020967 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000143FACE7A30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF50D420 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF823040 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224411F90 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FED5FA20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422482BD90 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF13BA70 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142207C54B0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF13BA70 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FE8EC020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF13BA70 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF13BA70 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB09B020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB15EA60 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FED5FA20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF13BA70 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FE8EC020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014221F37030 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FAB92850 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB0C2230 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014221CE0080 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422025DC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF61D010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEAC8CB0 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422444AD30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422025DC30 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF282040 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Cinemachine.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224032620 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FF61D010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FB2BC010 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001422400C600 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FEF4F020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224032620 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000142232D5F40 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143D0629600 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FE8EC020 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000143FED5FA20 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014224032620 doesn't match image C:\Users\user\Documents\GitHub\GameJamPJ\JDJS_GJamProj\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.759 seconds
+- Completed reload, in  4.288 seconds
 Domain Reload Profiling:
-	ReloadAssembly (760ms)
-		BeginReloadAssembly (92ms)
+	ReloadAssembly (4290ms)
+		BeginReloadAssembly (456ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (25ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (623ms)
-			LoadAssemblies (75ms)
+			CreateAndSetChildDomain (114ms)
+		EndReloadAssembly (3586ms)
+			LoadAssemblies (434ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (206ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (235ms)
+			SetupTypeCache (1271ms)
+			ReleaseScriptCaches (6ms)
+			RebuildScriptCaches (181ms)
+			SetupLoadedEditorAssemblies (1337ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (151ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (362ms)
+				ProcessInitializeOnLoadAttributes (872ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (35ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (41ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2378 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 110.9 MB.
-System memory in use after: 110.9 MB.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.7 MB.
+System memory in use after: 105.8 MB.
 
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2838.
-Total: 2.755500 ms (FindLiveObjects: 0.172600 ms CreateObjectMapping: 0.074200 ms MarkObjects: 2.296400 ms  DeleteObjects: 0.211800 ms)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2844.
+Total: 16.790800 ms (FindLiveObjects: 0.661300 ms CreateObjectMapping: 0.360300 ms MarkObjects: 14.463900 ms  DeleteObjects: 1.300700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
