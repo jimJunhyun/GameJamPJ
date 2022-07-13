@@ -6,11 +6,13 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
     public List<AttackRange> range = new List<AttackRange>();
-    public Transform attPos;
+    public List<Transform> attPos = new List<Transform>();
 	public List<GameObject> warningRange = new List<GameObject>();
 	public bool attackTrigger;
 
 	public bool preAttackWarn = true;
+
+	public bool isRandomAttack = false;
 
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
 	public Action attack;
@@ -20,7 +22,7 @@ public class Attacker : MonoBehaviour
 
     void Attack()
 	{
-        range[attackNo].transform.position = attPos.position;
+        range[attackNo].transform.position = attPos[attackNo].position;
         StartCoroutine(DelayOnOff());
 	}
 
@@ -70,7 +72,11 @@ public class Attacker : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if (isRandomAttack)
+		{
+			attackNo = UnityEngine.Random.Range(0, range.Count);
+		}
+		if (Input.GetKeyDown(KeyCode.R) && !isRandomAttack)
 		{
 			attackNo += 1;
 			if (attackNo >= range.Count)

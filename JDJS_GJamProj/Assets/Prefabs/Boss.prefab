@@ -352,7 +352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360130367888213214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1360130368554514075}
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360130368138058301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1360130369519244251}
@@ -408,7 +408,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 0.5817311, y: 0}
+  m_Offset: {x: 1, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -419,7 +419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.863462, y: 0.9}
+  m_Size: {x: 0.9, y: 2.7}
   m_EdgeRadius: 0
 --- !u!61 &1360130368138058296
 BoxCollider2D:
@@ -434,7 +434,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -488,34 +488,34 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1360130368138058299}
     m_ColliderPaths:
-    - - X: 15134328
-        Y: -4500000
-      - X: 15134328
-        Y: 4500000
-      - X: -3499999
-        Y: 4499707
-      - X: -3499706
-        Y: -4500000
+    - - X: 14499707
+        Y: -3500000
+      - X: 14499707
+        Y: 23500000
+      - X: 5500000
+        Y: 23499707
+      - X: 5500293
+        Y: -3500000
   - m_Collider: {fileID: 1360130368138058296}
     m_ColliderPaths:
     - - X: 4499707
-        Y: -13500000
+        Y: -23500000
       - X: 4499707
-        Y: 13500000
+        Y: 3500000
       - X: -4500000
-        Y: 13499707
+        Y: 3499707
       - X: -4499707
-        Y: -13500000
+        Y: -23500000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4499414, y: -1.35}
-      - {x: 0.4500001, y: -0.45000002}
-      - {x: 1.5134329, y: -0.4499707}
-      - {x: 1.5134035, y: 0.45000002}
-      - {x: 0.4499707, y: 0.4500127}
-      - {x: 0.4499414, y: 1.35}
-      - {x: -0.45000002, y: 1.3499414}
-      - {x: -0.4499414, y: -1.35}
+    - - {x: 1.4499414, y: -0.35}
+      - {x: 1.4499414, y: 2.3500001}
+      - {x: 0.55, y: 2.3499415}
+      - {x: 0.5500586, y: -0.35}
+    - - {x: 0.4499414, y: -2.3500001}
+      - {x: 0.4499414, y: 0.35}
+      - {x: -0.45000002, y: 0.3499414}
+      - {x: -0.4499414, y: -2.3500001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!114 &1360130368138058303
@@ -1192,7 +1192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360130369519244248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1360130368138058300}
@@ -1213,11 +1213,11 @@ GameObject:
   - component: {fileID: 1360130369819757916}
   - component: {fileID: 1360130369819757891}
   - component: {fileID: 1495718128328610581}
+  - component: {fileID: 6436001544212878502}
+  - component: {fileID: 7647270673558104697}
+  - component: {fileID: 3727463161195701931}
   - component: {fileID: 2124281361964372282}
   - component: {fileID: 1701602963177736169}
-  - component: {fileID: 5235867673597083725}
-  - component: {fileID: 5235867673597083726}
-  - component: {fileID: 5235867673597083731}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -1311,7 +1311,11 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+  isPlayer: 0
 --- !u!50 &1360130369819757891
 Rigidbody2D:
   serializedVersion: 4
@@ -1343,7 +1347,7 @@ Animator:
   m_GameObject: {fileID: 1360130369819757888}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fd19e207a3f83c94082674ca2cc63c57, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9420eb0afcc85ec42a6d96e0383c818b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1352,6 +1356,68 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6436001544212878502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360130369819757888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a445249ca547a37469eb96b80a33da85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range:
+  - {fileID: 1360130368554514070}
+  - {fileID: 3759183138037944109}
+  attPos:
+  - {fileID: 1360130367888213209}
+  - {fileID: 2753271725042803961}
+  warningRange:
+  - {fileID: 2428389830243360859}
+  - {fileID: 6827358110791696474}
+  attackTrigger: 0
+  preAttackWarn: 1
+  isRandomAttack: 1
+  attackNo: 0
+--- !u!114 &7647270673558104697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360130369819757888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b0a6de7fcdbf440b4d702b894bfd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShopPanel: {fileID: 0}
+  currentPos: {x: 0, y: 0}
+  targetPos: {x: 0, y: 0}
+  stop: 0
+  target: {fileID: 0}
+  ignoreLayer: 2
+  ignoreLayer2: 6
+  runBoolName: Run
+  idleBoolName: Idle
+  isEnemy: 1
+  direction: {fileID: 1360130369519244251}
+  initDelay: 0.5
+  conDelay: 1
+--- !u!114 &3727463161195701931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360130369819757888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a28291c878d9ea41ac359f5b6a82000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2124281361964372282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,7 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fa1faa079f64b409a053be1404424d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomRange: {x: 1, y: 1}
+  randomRange: {x: 0, y: 0}
 --- !u!61 &1701602963177736169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1389,65 +1455,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8125, y: 3.875}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &5235867673597083725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360130369819757888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b923982e52c5fcb458a14453a8cf0d8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossAttacks:
-  - range: {fileID: 1360130368554514070}
-    attPos: {fileID: 1360130367888213209}
-    warningRange: {fileID: 2428389830243360859}
-  - range: {fileID: 3759183138037944109}
-    attPos: {fileID: 2753271725042803961}
-    warningRange: {fileID: 6827358110791696474}
-  attackTrigger: 0
---- !u!114 &5235867673597083726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360130369819757888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26da47e509e07314680b4134cae72dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5235867673597083731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360130369819757888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2d5cf86e6aadb48be747e7f90389fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShopPanel: {fileID: 0}
-  currentPos: {x: 0, y: 0}
-  targetPos: {x: 0, y: 0}
-  stop: 0
-  target: {fileID: 0}
-  ignoreLayer: 2
-  ignoreLayer2: 6
-  runBoolName: Run
-  idleBoolName: Idle
-  isEnemy: 1
-  direction: {fileID: 1360130369519244251}
-  initDelay: 0.25
-  conDelay: 0.5
 --- !u!1 &1701602963958656677
 GameObject:
   m_ObjectHideFlags: 0

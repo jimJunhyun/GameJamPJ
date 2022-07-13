@@ -180,11 +180,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range:
   - {fileID: 395588600499845160}
-  attPos: {fileID: 395588599831579239}
+  attPos:
+  - {fileID: 7287896911714429486}
   warningRange:
   - {fileID: 3904076955422994149}
   attackTrigger: 0
   preAttackWarn: 1
+  isRandomAttack: 0
   attackNo: 0
 --- !u!114 &395588599078634492
 MonoBehaviour:
@@ -1164,6 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectTag: Player
   damage: 10
+  damaged: 0
 --- !u!1 &395588600553270770
 GameObject:
   m_ObjectHideFlags: 0

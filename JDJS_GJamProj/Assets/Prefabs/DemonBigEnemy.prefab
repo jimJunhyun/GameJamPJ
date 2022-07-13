@@ -236,11 +236,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range:
   - {fileID: 395588600499845160}
-  attPos: {fileID: 395588599831579239}
+  attPos:
+  - {fileID: 395588599831579239}
   warningRange:
   - {fileID: 3904076955422994149}
   attackTrigger: 0
   preAttackWarn: 1
+  isRandomAttack: 0
   attackNo: 0
 --- !u!114 &395588599078634492
 MonoBehaviour:

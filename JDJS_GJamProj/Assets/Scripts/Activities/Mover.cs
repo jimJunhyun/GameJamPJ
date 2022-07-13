@@ -39,6 +39,7 @@ public class Mover : MonoBehaviour
         
         if (Mathf.Abs(currentPos.x - targetPos.x) >= Mathf.Abs(currentPos.y - targetPos.y))
         {
+            
             if (currentPos.x > targetPos.x)
             {
                 dir = Vector2.left;
@@ -89,6 +90,7 @@ public class Mover : MonoBehaviour
         }
         if (!Physics2D.OverlapBox(direction.position, Vector2.one * 0.5f, 0f, ignoreLayer))
 		{
+            
             currentPos += dir;
         }
     }
@@ -107,6 +109,7 @@ public class Mover : MonoBehaviour
             yield return new WaitForSeconds(conDelay);
             if(target != null)
 			{
+                
                 if (stop)
                 {
                     if (isEnemy)
