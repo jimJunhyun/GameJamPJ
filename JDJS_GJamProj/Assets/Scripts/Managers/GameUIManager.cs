@@ -14,8 +14,6 @@ public class GameUIManager : MonoBehaviour
     //[SerializeField] Button StatusBT;
     [SerializeField] RectTransform StatusPanel;
     [SerializeField] RectTransform hpPanel;
-    bool OntheStatus = false;
-    int coinCnt;
 
 	private void Awake()
 	{
@@ -56,8 +54,6 @@ public class GameUIManager : MonoBehaviour
     }
     public void HitDmage(int hitBeforeHP)
     {
-        Debug.Log(hitBeforeHP / 2);
-        Debug.Log(hpPanel.transform.GetChild(1));
         Image heart = hitBeforeHP % 2 == 1 ?
             hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
         if (hitBeforeHP % 2 == 1)
@@ -69,9 +65,9 @@ public class GameUIManager : MonoBehaviour
             heart.sprite = halfHeartImage.sprite;
         }
     }
-    public void GetCoin()
+    public void CoinUIUpdate(int val)
     {
-        coinCntTxt.text = $"{++coinCnt}";
+        coinCntTxt.text = $"{val}";
     }
     //IEnumerator OnStatus()
     //{
