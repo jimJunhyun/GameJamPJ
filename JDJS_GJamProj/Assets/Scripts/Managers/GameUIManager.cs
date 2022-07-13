@@ -17,9 +17,12 @@ public class GameUIManager : MonoBehaviour
     bool OntheStatus = false;
     int coinCnt;
 
-    int a = 5;
+	private void Awake()
+	{
+        instane = this;
+    }
 
-    void Start()
+	void Start()
     {
         StatusPanel.gameObject.SetActive(false);
         //StartCoroutine("OnStatus");
@@ -38,16 +41,6 @@ public class GameUIManager : MonoBehaviour
         {
             StatusPanel.gameObject.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            InitHpUI(5);
-
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            HitDmage(a--);
-
-        }
     }
     public void InitHpUI(int maxHP)
     {
@@ -63,6 +56,8 @@ public class GameUIManager : MonoBehaviour
     }
     public void HitDmage(int hitBeforeHP)
     {
+        Debug.Log(hitBeforeHP / 2);
+        Debug.Log(hpPanel.transform.GetChild(1));
         Image heart = hitBeforeHP % 2 == 1 ?
             hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
         if (hitBeforeHP % 2 == 1)

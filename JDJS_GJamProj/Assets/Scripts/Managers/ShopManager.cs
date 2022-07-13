@@ -11,36 +11,40 @@ public class ShopManager : MonoBehaviour
     [SerializeField] GameObject bigGreenPotion;
     [SerializeField] GameObject bigYellowPotion;
     
+    GameObject player;
+    Mover playerMover;
+    AttackRange playerAttack;
+    PlayerCtrl playerCont;
+    HpObject playerHp;
+    
     public void RedBigPotionClick()
     {
         bigRedPotion.SetActive(false);
-        //player 공격력 +
+        playerAttack.damage += 1;
     }
     public void BlueBigPotionClick()
     {
         bigBluePotion.SetActive(false);
-        //player 공격속도 +
+        playerCont.cooltime -= 0.25f;
     }
     public void GreenBigPotionClick()
     {
         bigGreenPotion.SetActive(false);
-        //player 체력 +
+        playerHp.maxHp += 2;
     }
     public void YellowBigPotionClick()
     {
         bigYellowPotion.SetActive(false);
-        //player 이동속도
+        playerMover.conDelay -= 0.25f;
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //player를 받아와야함
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        player = GameObject.Find("Player");
+        playerMover = player.GetComponent<Mover>();
+        playerCont = player.GetComponentInChildren<PlayerCtrl>();
+        playerAttack = player.GetComponentInChildren<Attacker>().range;
+        playerHp = player.GetComponent<HpObject>();
     }
 }
