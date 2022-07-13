@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 86787f8cada935646b8f01ee16a9fdde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,6 +111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853455500616002332}
+  - component: {fileID: 6023483067032533982}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -136,6 +137,24 @@ Transform:
   m_Father: {fileID: 8076858744202109981}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6023483067032533982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893164426591716546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c9bab7d5e85cb44b78420b9290d5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 1264057566443687895}
+  - {fileID: 3643685678689175058}
+  - {fileID: 9202420154528710917}
+  - {fileID: 2344254218259735970}
+  useTriggerName: Use
 --- !u!1 &907617850074990765
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectTag: Enemy
   damage: 10
+  damaged: 0
 --- !u!1 &978061748518882661
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectTag: Enemy
   damage: 10
+  damaged: 0
 --- !u!1 &1313723847103270513
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +572,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: aca1ad7bbe09d034780a5e25b864ff0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -735,7 +756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 269e6bbea5c198044ba797f986e43648, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1024,6 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectTag: Enemy
   damage: 10
+  damaged: 0
 --- !u!1 &5814830466620317929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: bebbf8b93343d844b86682e3d9820167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1182,6 +1204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooltime: 0.5
+  ShopPanel: {fileID: 0}
+  stageText: {fileID: 0}
 --- !u!114 &8076858744202109979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,6 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectTag: Enemy
   damage: 10
+  damaged: 0
 --- !u!1 &8076858745768030981
 GameObject:
   m_ObjectHideFlags: 0
