@@ -7,26 +7,34 @@ using UnityEngine.Events;
 public class HpObject : MonoBehaviour
 {
 	public int maxHp;
-	[HideInInspector]
+	//[HideInInspector]
 	public int currentHp;
     public Action<int> Damaged;
 	public string HitTriggerName = "Hit";
 	public UnityEvent OnHit;
+	public UnityEvent OnDead;
 	[SerializeField] GameObject dropCoin;
+	public bool isPlayer;
 
 
 	Animator anim;
 
 	void HpDecrease(int dam)
 	{
+		GameUIManager.instane.HitDmage(currentHp);
 		OnHit.Invoke();
 		currentHp -= dam;
+		
 		anim.SetTrigger(HitTriggerName);
 	}
 
-	private void Awake()
+	private void Start()
 	{
 		currentHp = maxHp;
+		if (isPlayer)
+		{
+			GameUIManager.instane.InitHpUI(currentHp);
+		}
 		Damaged = HpDecrease;
 		anim = GetComponent<Animator>();
 	}
@@ -38,8 +46,13 @@ public class HpObject : MonoBehaviour
 			{
 				Instantiate(dropCoin, transform.position, Quaternion.identity);
 			}
+			OnDead.Invoke();
+			if (!isPlayer)
+			{
+				Destroy(gameObject);
+			}
 			
-			Destroy(gameObject);
+			
 		}
 		
 	}
