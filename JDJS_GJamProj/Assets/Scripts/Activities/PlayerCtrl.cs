@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerCtrl : MonoBehaviour
 {
 	public float cooltime = 0.5f;
+	public GameObject ShopPanel;
+	public Text stageText;
 	
 	Attacker myAtt;
 	Vector2 dir;
 	bool attackable = true;
-	ShopDetect detecter;
-
-	List<Mover> stageEnemys = new List<Mover>();
-	Transform currentStage;
 
 	private void Awake()
 	{
-		currentStage = GameObject.Find("Map1").GetComponent<Transform>();
+		//ShopPanel.SetActive(false);
 		myAtt = GetComponent<Attacker>();
-		detecter = GetComponent<ShopDetect>();
 		StartCoroutine(Cooldown());
 	}
 
@@ -48,7 +46,7 @@ public class PlayerCtrl : MonoBehaviour
 				transform.eulerAngles = new Vector3(0, 0, 90);
 			}
 		}
-		if (Input.GetMouseButtonDown(0) && attackable && !detecter.shopping)
+		if (Input.GetMouseButtonDown(0) && attackable)
 		{
 			myAtt.attackTrigger = true;
 			attackable = false;
@@ -67,6 +65,7 @@ public class PlayerCtrl : MonoBehaviour
 			//}
 			currentStage = box.transform.parent.GetComponent<Transform>();
 			CameraManager.instance.MoveCMVcam(currentStage);
+			stageText.text = "1-" + currentStage.GetComponent<StageData>().Stagedata;
 			//currentStage.GetComponentsInChildren<Mover>(stageEnemys);
 			//for (int i = 0; i < stageEnemys.Count; i++)
 			//{

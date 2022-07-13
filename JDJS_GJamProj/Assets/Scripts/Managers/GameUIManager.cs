@@ -13,11 +13,18 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] Text coinCntTxt;
     //[SerializeField] Button StatusBT;
     [SerializeField] RectTransform StatusPanel;
-    [SerializeField] RectTransform hpPanel;
+    [SerializeField] RectTransform hpPanel; 
+    [SerializeField] Image Panel;
+    float time = 0;
+    float ftime = 1f;
+    bool OntheStatus = false;
+    int coinCnt;
+
 
 	private void Awake()
 	{
         instane = this;
+        StartCoroutine("Fade");
     }
 
 	void Start()
@@ -40,6 +47,20 @@ public class GameUIManager : MonoBehaviour
             StatusPanel.gameObject.SetActive(false);
         }
     }
+
+    IEnumerator Fade()
+    {
+        Panel.gameObject.SetActive(true);
+        Color alpha = Panel.color;
+        while (alpha.a >= 0f)
+        {
+            time += Time.deltaTime / ftime;
+            alpha.a = Mathf.Lerp(1, 0, time);
+            Panel.color = alpha;
+            yield return null;
+        }
+        yield return null;
+    }
     public void InitHpUI(int maxHP)
     {
         for (int i = 0; i < maxHP / 2; i++)
@@ -54,6 +75,8 @@ public class GameUIManager : MonoBehaviour
     }
     public void HitDmage(int hitBeforeHP)
     {
+        Debug.Log(hitBeforeHP / 2);
+        Debug.Log(hpPanel.transform.GetChild(1));
         Image heart = hitBeforeHP % 2 == 1 ?
             hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
         if (hitBeforeHP % 2 == 1)
@@ -65,9 +88,9 @@ public class GameUIManager : MonoBehaviour
             heart.sprite = halfHeartImage.sprite;
         }
     }
-    public void CoinUIUpdate(int val)
+    public void GetCoin()
     {
-        coinCntTxt.text = $"{val}";
+        coinCntTxt.text = $"{++coinCnt}";
     }
     //IEnumerator OnStatus()
     //{
