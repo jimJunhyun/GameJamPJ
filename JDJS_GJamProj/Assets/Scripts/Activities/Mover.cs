@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    public GameObject ShopPanel;
     public Vector2 currentPos;
     public Vector2 targetPos;
     
@@ -93,7 +94,7 @@ public class Mover : MonoBehaviour
         }
     }
 
-	private void OnDrawGizmos()
+    private void OnDrawGizmos()
 	{
 		Gizmos.DrawWireCube(direction.position, Vector2.one * 0.5f);
 	}

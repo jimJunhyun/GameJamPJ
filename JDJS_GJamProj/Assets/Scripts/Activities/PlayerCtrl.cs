@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayerCtrl : MonoBehaviour
 {
 	public float cooltime = 0.5f;
-
+	public GameObject ShopPanel;
+	
 	Attacker myAtt;
 	Vector2 dir;
 	bool attackable = true;
 
 	private void Awake()
 	{
+		ShopPanel.SetActive(false);
 		myAtt = GetComponent<Attacker>();
 		StartCoroutine(Cooldown());
 	}
@@ -49,15 +51,7 @@ public class PlayerCtrl : MonoBehaviour
 		}
 	}
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Shop")
-        {
-			//상점패널 활성화
-        }
-    }
-
-    IEnumerator Cooldown()
+	IEnumerator Cooldown()
 	{
 		while (true)
 		{
