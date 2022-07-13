@@ -9,10 +9,12 @@ public class ShakeCam : MonoBehaviour
 	public float shakeTime;
 	bool invoking = false;
 	public CinemachineBasicMultiChannelPerlin noise;
+	CinemachineVirtualCamera cmvCam;
 
 	private void Awake()
 	{
-		noise = GetComponent<CinemachineBasicMultiChannelPerlin>();
+		cmvCam = GetComponent<CinemachineVirtualCamera>();
+		noise = cmvCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 	}
 	public void Shake()
 	{
@@ -22,9 +24,9 @@ public class ShakeCam : MonoBehaviour
 	IEnumerator Shaker()
 	{
 		invoking = true;
-		noise.enabled = true;
+		noise.m_AmplitudeGain = shakeStrength;
 		yield return new WaitForSeconds(shakeTime);
-		noise.enabled = false;
+		noise.m_AmplitudeGain  =0f;
 		invoking = false;
 	}
 }

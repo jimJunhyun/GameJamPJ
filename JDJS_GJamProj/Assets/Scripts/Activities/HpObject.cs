@@ -34,7 +34,11 @@ public class HpObject : MonoBehaviour
 	{
 		if(currentHp <= 0)
 		{
-			Instantiate(dropCoin, transform.position, Quaternion.identity);
+			if(dropCoin != null)
+			{
+				Instantiate(dropCoin, transform.position, Quaternion.identity);
+			}
+			
 			Destroy(gameObject);
 		}
 		
