@@ -83,8 +83,8 @@ public class GameUIManager : MonoBehaviour
     }
     public void HitDmage(int hitBeforeHP)
     {
-        Debug.Log(hitBeforeHP / 2);
-        Debug.Log(hpPanel.transform.GetChild(1));
+        Debug.Log("HeartNum : " + hitBeforeHP / 2);
+        Debug.Log("Heart" + hpPanel.transform.GetChild(1));
         Image heart = hitBeforeHP % 2 == 1 ?
             hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
         if (hitBeforeHP % 2 == 1)

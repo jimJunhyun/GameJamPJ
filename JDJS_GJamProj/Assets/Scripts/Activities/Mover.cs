@@ -27,6 +27,7 @@ public class Mover : MonoBehaviour
 
     public float initDelay;
     public float conDelay;
+    public float minDelay;
 
     bool isInvoking = false;
     Vector2 dir = Vector2.zero;
@@ -199,7 +200,10 @@ public class Mover : MonoBehaviour
             isInvoking = true;
             StartCoroutine(LerpMove());
         }
-
+        if(conDelay < minDelay)
+		{
+            conDelay = minDelay;
+		}
     }
 
 }
