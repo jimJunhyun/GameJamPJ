@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] RectTransform MenuPanel;
-    [SerializeField] RectTransform Setting;
-    [SerializeField] RectTransform ShopPanel;
+    public Button Quit;
+    public Button Play;
     public Image Panel;
+    public Image Boss;
     float time = 0;
     float ftime = 1f;
+    Animator animator;
     public void Fade()
     {
         StartCoroutine(FadeFlow());
@@ -20,8 +21,12 @@ public class UIManager : MonoBehaviour
 
     IEnumerator FadeFlow()
     {
+        Play.DOPlay();
         Panel.gameObject.SetActive(true);
+        Play.gameObject.SetActive(false);
+        Quit.gameObject.SetActive(false)    ;
         Color alpha = Panel.color;
+
         while (alpha.a < 1f)
         {
             time += Time.deltaTime / ftime;
@@ -31,38 +36,15 @@ public class UIManager : MonoBehaviour
         }
         yield return null;
         SceneManager.LoadScene("Play");
-
+        //yield return new WaitForSeconds(3f);
+        //animator = GameObject.Find("StartSceneBoss").GetComponent<Animator>();
+        //animator.SetBool("isDochak", true);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        MenuPanel.DOAnchorPos(Vector2.zero, 0.25f);
-    }
-
-    
-    public void SettingButton()
-    {
-        MenuPanel.DOAnchorPos(new Vector2(-1920, 0), 0.25f);
-        Setting.DOAnchorPos(new Vector2(0, -459), 0.25f);
-    }
-
-    public void SettingCloseOnClick()
-    {
-        MenuPanel.DOAnchorPos(new Vector2(0, 0), 0.25f);
-        Setting.DOAnchorPos(new Vector2(1920, -459), 0.25f);
-    }
-
-    public void ShopCloseOnClick()
-    {
-        MenuPanel.DOAnchorPos(new Vector2(0, 0), 0.25f);
-        ShopPanel.DOAnchorPos(new Vector2(-1920, -1258.9f), 0.25f);
-    }
-
-    public void ShopButton()
-    {
-        MenuPanel.DOAnchorPos(new Vector2(1920, 0), 0.25f);
-        ShopPanel.DOAnchorPos(new Vector2(0, -1258.9f), 0.25f);
+        //MenuPanel.DOAnchorPos(Vector2.zero, 0.25f);
     }
 
 }
