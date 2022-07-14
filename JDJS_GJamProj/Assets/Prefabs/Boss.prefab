@@ -855,7 +855,7 @@ MonoBehaviour:
   OnDead:
     m_PersistentCalls:
       m_Calls: []
-  dropCoin: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+  dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
 --- !u!50 &1360130369819757891
 Rigidbody2D:
@@ -916,7 +916,9 @@ MonoBehaviour:
   warningRange:
   - {fileID: 2428389830243360859}
   - {fileID: 6827358110791696474}
-  attackSound: []
+  attackSound:
+  - {fileID: 8300000, guid: aba3f7d58d8f9604a98c777c0ea44c3a, type: 3}
+  - {fileID: 8300000, guid: d4ef45d4af818de4bb0410db9e0e6b68, type: 3}
   attackTrigger: 0
   attackAudioSource: {fileID: 3293935553265121269}
   preAttackWarn: 1

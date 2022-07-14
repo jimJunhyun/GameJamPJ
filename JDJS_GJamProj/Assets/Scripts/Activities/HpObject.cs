@@ -35,7 +35,7 @@ public class HpObject : MonoBehaviour
 	public void HpIncrease(int amount)
 	{
 		currentHp  = Mathf.Min(currentHp + amount, maxHp);
-		GameUIManager.instane.HitDmage(currentHp + 1);
+		GameUIManager.instane.Heal(currentHp);
 	}
 
 	private void Start()
