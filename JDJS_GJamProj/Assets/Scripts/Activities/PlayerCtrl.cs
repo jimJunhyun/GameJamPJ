@@ -29,6 +29,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private void Update()
 	{
+<<<<<<< Updated upstream
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			if (transform.localPosition == Vector3.down)
@@ -57,6 +58,8 @@ public class PlayerCtrl : MonoBehaviour
 			myAtt.attackTrigger = true;
 			attackable = false;
 		}
+=======
+>>>>>>> Stashed changes
 		Collider2D box = Physics2D.OverlapBox(transform.position, Vector2.one * 0.5f, 0f, 1 << 6);
 		if (box)
 		{
@@ -81,6 +84,39 @@ public class PlayerCtrl : MonoBehaviour
 		}
 	}
 
+	public void Attack()
+    {
+        if (attackable)
+        {
+			myAtt.attackTrigger = true;
+			attackable = false;
+		}
+		
+	}
+
+	public void Rotate()
+    {
+			if (transform.localPosition == Vector3.down)
+			{
+				transform.localPosition = Vector2.right;
+				transform.eulerAngles = new Vector3(0, 0, 0);
+			}
+			else if (transform.localPosition == Vector3.left)
+			{
+				transform.localPosition = Vector2.down;
+				transform.eulerAngles = new Vector3(0, 0, 270);
+			}
+			else if (transform.localPosition == Vector3.up)
+			{
+				transform.localPosition = Vector2.left;
+				transform.eulerAngles = new Vector3(0, 0, 180);
+			}
+			else if (transform.localPosition == Vector3.right)
+			{
+				transform.localPosition = Vector2.up;
+				transform.eulerAngles = new Vector3(0, 0, 90);
+			}
+	}
 	IEnumerator Cooldown()
 	{
 		while (true)

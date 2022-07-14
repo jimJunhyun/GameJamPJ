@@ -77,6 +77,10 @@ public class Attacker : MonoBehaviour
 		
 	}
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.R))
