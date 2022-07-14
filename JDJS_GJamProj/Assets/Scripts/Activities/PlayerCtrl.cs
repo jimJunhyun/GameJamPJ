@@ -72,6 +72,7 @@ public class PlayerCtrl : MonoBehaviour
 			//}
 			currentStage = box.transform.parent.GetComponent<Transform>();
 			CameraManager.instance.MoveCMVcam(currentStage);
+			Debug.Log(currentStage);
 			stageText.text = "1-" + currentStage.GetComponent<StageData>().Stagedata;
 			//currentStage.GetComponentsInChildren<Mover>(stageEnemys);
 			//for (int i = 0; i < stageEnemys.Count; i++)
