@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706499807
 GameObject:
@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 745185131}
   - component: {fileID: 745185130}
   - component: {fileID: 745185129}
+  - component: {fileID: 745185132}
   m_Layer: 5
   m_Name: reStart
   m_TagString: Untagged
@@ -390,7 +391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 745185130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 745185132}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &745185130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +442,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745185127}
   m_CullTransparentMesh: 1
+--- !u!114 &745185132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745185127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2daa5d4a7948047b1170b14f1100a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Play
 --- !u!1 &812558776
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +865,7 @@ RectTransform:
   - {fileID: 848094207}
   - {fileID: 706499808}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1028,7 +1054,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990904602
 GameObject:
@@ -1042,6 +1068,7 @@ GameObject:
   - component: {fileID: 1990904606}
   - component: {fileID: 1990904605}
   - component: {fileID: 1990904604}
+  - component: {fileID: 1990904607}
   m_Layer: 5
   m_Name: menu
   m_TagString: Untagged
@@ -1111,7 +1138,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1990904605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990904607}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1990904605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,6 +1189,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990904602}
   m_CullTransparentMesh: 1
+--- !u!114 &1990904607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990904602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2daa5d4a7948047b1170b14f1100a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: StartScene
 --- !u!1 &2044094428
 GameObject:
   m_ObjectHideFlags: 0

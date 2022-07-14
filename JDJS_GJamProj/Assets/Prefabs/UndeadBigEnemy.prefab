@@ -118,6 +118,7 @@ MonoBehaviour:
   direction: {fileID: 395588599317224805}
   initDelay: 0.25
   conDelay: 0.5
+  minDelay: 0
 --- !u!61 &395588599078634465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ MonoBehaviour:
   OnDead:
     m_PersistentCalls:
       m_Calls: []
-  dropCoin: {fileID: 7224313752403014912, guid: b75a4d7d622531f42a0c293a1731af8c, type: 3}
+  dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
 --- !u!114 &395588599078634467
 MonoBehaviour:
@@ -921,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Player
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &668036663940613744
 GameObject:

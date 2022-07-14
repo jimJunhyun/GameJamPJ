@@ -1163,6 +1163,7 @@ GameObject:
   - component: {fileID: 4979836107502969786}
   - component: {fileID: 4979836107502969765}
   - component: {fileID: 419531288}
+  - component: {fileID: 2795206592030449842}
   m_Layer: 0
   m_Name: Map6
   m_TagString: Untagged
@@ -1206,6 +1207,19 @@ Grid:
   m_CellLayout: 0
   m_CellSwizzle: 0
 --- !u!114 &419531288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979836107502969764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fab12a2930cd442895723d3ebd1b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stagedata: 6
+--- !u!114 &2795206592030449842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

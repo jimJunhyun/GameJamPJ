@@ -27,6 +27,7 @@ public class Mover : MonoBehaviour
 
     public float initDelay;
     public float conDelay;
+    public float minDelay;
 
     bool isInvoking = false;
     Vector2 dir = Vector2.zero;
@@ -163,8 +164,12 @@ public class Mover : MonoBehaviour
 
 	private void OnBecameInvisible()
 	{
+		if (isEnemy)
+		{
+            target = null;
+        }
         Debug.Log("InVISIBLE  " + transform.name);
-        target = null;
+        
 	}
 
 	// Start is called before the first frame update
@@ -199,7 +204,10 @@ public class Mover : MonoBehaviour
             isInvoking = true;
             StartCoroutine(LerpMove());
         }
-
+        if(conDelay < minDelay)
+		{
+            conDelay = minDelay;
+		}
     }
 
 }

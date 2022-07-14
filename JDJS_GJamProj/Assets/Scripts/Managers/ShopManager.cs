@@ -51,13 +51,13 @@ public class ShopManager : MonoBehaviour
 		{
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= redVal;
-            bigRedPotion.SetActive(false);
+            
 			for (int i = 0; i < playerAttack.Count; i++)
 			{
                 playerAttack[i].damage += 1;
             }
             ATK.text = "ATK : " + playerAttack[attackNumber].damage;
-            
+            bigRedPotion.SetActive(false);
         }
         
     }
@@ -67,11 +67,12 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= blueVal;
-            bigBluePotion.SetActive(false);
             playerCont.cooltime -= 0.25f;
             ASPD.text = "ASPD : " + playerCont.cooltime;
+            bigBluePotion.SetActive(false);
+
         }
-        
+
     }
     public void GreenBigPotionClick()
     {
@@ -79,8 +80,8 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= greenVal;
+            playerHp.HpIncrease(5);
             bigGreenPotion.SetActive(false);
-            playerHp.maxHp += 2;
         }
         
     }
@@ -90,9 +91,10 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= yellowVal;
-            bigYellowPotion.SetActive(false);
             playerMover.conDelay -= 0.25f;
             SPD.text = "SPD : " + playerMover.conDelay;
+            bigYellowPotion.SetActive(false);
+            
         }
         
     }
@@ -101,12 +103,13 @@ public class ShopManager : MonoBehaviour
         if (SredVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SredVal;
-            smallRedPotion.SetActive(false);
+            
             for (int i = 0; i < playerAttack.Count; i++)
             {
                 playerAttack[i].damage += 1;
             }
             ATK.text = "ATK : " + playerAttack[attackNumber].damage;
+            smallRedPotion.SetActive(false);
 
         }
 
@@ -127,8 +130,8 @@ public class ShopManager : MonoBehaviour
         if (SgreenVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SgreenVal;
+            playerHp.HpIncrease(2);
             smallGreenPotion.SetActive(false);
-            playerHp.maxHp += 2;
         }
 
     }
@@ -138,7 +141,7 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.coinNum -= SyellowVal;
             smallYellowPotion.SetActive(false);
-            playerMover.conDelay -= 0.25f;
+            playerMover.conDelay -= 0.1f;
             SPD.text = "SPD : " + playerMover.conDelay;
         }
 
@@ -152,7 +155,7 @@ public class ShopManager : MonoBehaviour
         playerCont = player.GetComponentInChildren<PlayerCtrl>();
         playerAttack = player.GetComponentInChildren<Attacker>().range;
         playerHp = player.GetComponent<HpObject>();
-        attackNumber = GameObject.Find("Direction").GetComponent<Attacker>().attackNo;
+        attackNumber = player.GetComponentInChildren<Attacker>().attackNo;
         int.TryParse( bigRedPotionVal.text, out redVal);
         int.TryParse( bigBluePotionVal.text, out blueVal);
         int.TryParse( bigGreenPotionVal.text, out greenVal);

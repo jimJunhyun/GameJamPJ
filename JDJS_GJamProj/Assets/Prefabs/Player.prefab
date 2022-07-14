@@ -230,20 +230,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 4120674621716017271}
     m_ColliderPaths:
-    - - X: 4499704
-        Y: -13500001
-      - X: 4499709
-        Y: 13499999
-      - X: -4499997
-        Y: 13499708
-      - X: -4499709
-        Y: -13499999
+    - - X: 4499707
+        Y: -13500000
+      - X: 4499707
+        Y: 13500000
+      - X: -4500000
+        Y: 13499707
+      - X: -4499707
+        Y: -13500000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4499411, y: -1.3500001}
-      - {x: 0.4499416, y: 1.3499999}
-      - {x: -0.44999972, y: 1.3499415}
-      - {x: -0.4499416, y: -1.3499999}
+    - - {x: 0.4499414, y: -1.35}
+      - {x: 0.4499414, y: 1.35}
+      - {x: -0.45000002, y: 1.3499414}
+      - {x: -0.4499414, y: -1.35}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &4120674621716017271
@@ -363,19 +363,19 @@ CompositeCollider2D:
   - m_Collider: {fileID: 1411273737916619007}
     m_ColliderPaths:
     - - X: 23499707
-        Y: -4500004
+        Y: -4500000
       - X: 23499707
-        Y: 4499995
-      - X: -3499999
+        Y: 4500000
+      - X: -3500000
         Y: 4499707
-      - X: -3499708
-        Y: -4499999
+      - X: -3499707
+        Y: -4500000
   m_CompositePaths:
     m_Paths:
-    - - {x: 2.3499415, y: -0.4500004}
-      - {x: 2.3499415, y: 0.4499995}
-      - {x: -0.3499999, y: 0.4499414}
-      - {x: -0.3499415, y: -0.4499999}
+    - - {x: 2.3499415, y: -0.45000002}
+      - {x: 2.3499415, y: 0.45000002}
+      - {x: -0.35, y: 0.4499414}
+      - {x: -0.3499414, y: -0.45000002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &1411273737916619007
@@ -945,38 +945,38 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 5164321063950270850}
     m_ColliderPaths:
-    - - X: 3499706
+    - - X: 3499707
         Y: -4500000
-      - X: 3499708
-        Y: 4499999
+      - X: 3499707
+        Y: 4500000
       - X: -23500000
-        Y: 4499711
+        Y: 4499707
       - X: -23499707
-        Y: -4499995
+        Y: -4500000
   - m_Collider: {fileID: 5656353435373253627}
     m_ColliderPaths:
-    - - X: -5500295
-        Y: -13499999
-      - X: -5500290
-        Y: 13500001
-      - X: -14499998
-        Y: 13499710
-      - X: -14499710
-        Y: -13499998
+    - - X: -5500293
+        Y: -13500000
+      - X: -5500293
+        Y: 13500000
+      - X: -14500000
+        Y: 13499707
+      - X: -14499707
+        Y: -13500000
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.5500588, y: -1.3499999}
-      - {x: -0.5499999, y: -0.4499998}
-      - {x: 0.3499706, y: -0.4499707}
-      - {x: 0.3499415, y: 0.4499999}
-      - {x: -0.5500292, y: 0.45001972}
-      - {x: -0.5500583, y: 1.3500001}
-      - {x: -1.4499998, y: 1.3499417}
-      - {x: -1.4500196, y: 0.4499807}
-      - {x: -2.3500001, y: 0.4499418}
-      - {x: -2.3499415, y: -0.4499995}
-      - {x: -1.4499806, y: -0.4500291}
-      - {x: -1.4499418, y: -1.3499998}
+    - - {x: -0.5500586, y: -1.35}
+      - {x: -0.5499999, y: -0.45000002}
+      - {x: 0.3499707, y: -0.4499707}
+      - {x: 0.3499414, y: 0.45000002}
+      - {x: -0.5500293, y: 0.4500196}
+      - {x: -0.5500586, y: 1.35}
+      - {x: -1.45, y: 1.3499414}
+      - {x: -1.4500196, y: 0.4499805}
+      - {x: -2.3500001, y: 0.4499414}
+      - {x: -2.3499415, y: -0.45000002}
+      - {x: -1.4499805, y: -0.4500294}
+      - {x: -1.4499414, y: -1.35}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &5164321063950270850
@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 8076858744202109979}
   - component: {fileID: 3281810647819296056}
   - component: {fileID: 8643913668704564297}
+  - component: {fileID: 1520040754}
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
@@ -1175,8 +1176,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076858744202109982}
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8076858745009168019}
@@ -1191,7 +1192,7 @@ Transform:
   - {fileID: 853455500616002332}
   m_Father: {fileID: 8076858745768030978}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8076858744202109980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,11 +1233,11 @@ MonoBehaviour:
   - {fileID: 8298250013285169643}
   attackSound:
   - {fileID: 8300000, guid: c3eed2b611ac3f142820e2fd3c5192fe, type: 3}
+  - {fileID: 8300000, guid: d4ef45d4af818de4bb0410db9e0e6b68, type: 3}
   - {fileID: 8300000, guid: aba3f7d58d8f9604a98c777c0ea44c3a, type: 3}
   - {fileID: 8300000, guid: f65cacb6eabbe1f41b5fe9c0545d1208, type: 3}
-  - {fileID: 8300000, guid: d4ef45d4af818de4bb0410db9e0e6b68, type: 3}
   attackTrigger: 0
-  attackAudioSource: {fileID: 8643913668704564297}
+  attackAudioSource: {fileID: 1520040754}
   preAttackWarn: 0
   attackNo: 0
 --- !u!114 &3281810647819296056
@@ -1267,6 +1268,102 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1520040754
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076858744202109982}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1424,20 +1521,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 8076858745009168017}
     m_ColliderPaths:
-    - - X: 13999704
-        Y: -14000002
-      - X: 13999708
-        Y: 3999997
+    - - X: 13999707
+        Y: -14000000
+      - X: 13999707
+        Y: 3999999
       - X: -3999999
-        Y: 3999707
-      - X: -3999709
-        Y: -13999999
+        Y: 3999706
+      - X: -3999706
+        Y: -14000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 1.3999411, y: -1.4000002}
-      - {x: 1.3999416, y: 0.3999997}
-      - {x: -0.39999992, y: 0.3999414}
-      - {x: -0.3999416, y: -1.3999999}
+    - - {x: 1.3999414, y: -1.4}
+      - {x: 1.3999414, y: 0.39999992}
+      - {x: -0.39999992, y: 0.3999413}
+      - {x: -0.3999413, y: -1.4}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &8076858745009168017
@@ -1593,7 +1690,7 @@ MonoBehaviour:
   isEnemy: 0
   direction: {fileID: 8076858744202109981}
   initDelay: 0
-  conDelay: 1
+  conDelay: 0.3
 --- !u!61 &8076858745768030977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1632,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58a2fe420864d5489d040d778192399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 40
+  maxHp: 123123123
   currentHp: 0
   HitTriggerName: Hit
   OnHit:
@@ -1642,7 +1739,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dropCoin: {fileID: 0}
-  isPlayer: 0
+  isPlayer: 1
 --- !u!50 &6034419237902049757
 Rigidbody2D:
   serializedVersion: 4
