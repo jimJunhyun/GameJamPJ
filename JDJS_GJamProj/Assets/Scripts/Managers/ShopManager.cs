@@ -109,8 +109,6 @@ public class ShopManager : MonoBehaviour
                 playerAttack[i].damage += 1;
             }
             ATK.text = "ATK : " + playerAttack[attackNumber].damage;
-
-            Debug.Log("!!");
             smallRedPotion.SetActive(false);
 
         }
