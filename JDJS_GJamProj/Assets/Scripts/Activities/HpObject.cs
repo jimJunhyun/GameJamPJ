@@ -35,7 +35,7 @@ public class HpObject : MonoBehaviour
 	public void HpIncrease(int amount)
 	{
 		currentHp  = Mathf.Min(currentHp + amount, maxHp);
-		GameUIManager.instane.HitDmage(currentHp + 1);
+		GameUIManager.instane.Heal(currentHp);
 	}
 
 	private void Start()
@@ -66,4 +66,12 @@ public class HpObject : MonoBehaviour
 		}
 		
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		if (collision.CompareTag("Spikes"))
+        {
+			currentHp -= 1;
+			Debug.Log(currentHp);
+        }
+    }
 }

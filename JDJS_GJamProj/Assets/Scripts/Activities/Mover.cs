@@ -164,8 +164,12 @@ public class Mover : MonoBehaviour
 
 	private void OnBecameInvisible()
 	{
+		if (isEnemy)
+		{
+            target = null;
+        }
         Debug.Log("InVISIBLE  " + transform.name);
-        target = null;
+        
 	}
 
 	// Start is called before the first frame update
