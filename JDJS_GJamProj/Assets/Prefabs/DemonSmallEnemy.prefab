@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTag: Player
-  damage: 10
+  damage: 1
   damaged: 0
 --- !u!1 &579295183806818351
 GameObject:

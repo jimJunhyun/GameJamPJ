@@ -1642,7 +1642,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dropCoin: {fileID: 0}
-  isPlayer: 0
+  isPlayer: 1
 --- !u!50 &6034419237902049757
 Rigidbody2D:
   serializedVersion: 4

@@ -32,6 +32,12 @@ public class HpObject : MonoBehaviour
 		anim.SetTrigger(HitTriggerName);
 	}
 
+	public void HpIncrease(int amount)
+	{
+		currentHp  = Mathf.Min(currentHp + amount, maxHp);
+		GameUIManager.instane.HitDmage(currentHp + 1);
+	}
+
 	private void Start()
 	{
 		currentHp = maxHp;
