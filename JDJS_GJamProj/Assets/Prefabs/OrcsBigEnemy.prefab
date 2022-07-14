@@ -115,9 +115,10 @@ MonoBehaviour:
   runBoolName: Run
   idleBoolName: Idle
   isEnemy: 1
+  isBoss: 0
   direction: {fileID: 395588599317224805}
   initDelay: 0.25
-  conDelay: 0.5
+  conDelay: 1
   minDelay: 0
 --- !u!61 &395588599078634465
 BoxCollider2D:
@@ -168,6 +169,7 @@ MonoBehaviour:
       m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
+  audioSource: {fileID: 0}
 --- !u!114 &395588599078634467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,10 +188,11 @@ MonoBehaviour:
   warningRange:
   - {fileID: 3904076955422994149}
   attackSound:
-  - {fileID: 8300000, guid: c3eed2b611ac3f142820e2fd3c5192fe, type: 3}
+  - {fileID: 8300000, guid: 549d9253efee2034080213927179f9a1, type: 3}
   attackTrigger: 0
   attackAudioSource: {fileID: 2383299745666440359}
   preAttackWarn: 1
+  isRandomAttack: 0
   attackNo: 0
 --- !u!114 &395588599078634492
 MonoBehaviour:
@@ -266,8 +269,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d4ef45d4af818de4bb0410db9e0e6b68, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 549d9253efee2034080213927179f9a1, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -433,7 +436,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 1, y: 0}
+  m_Offset: {x: 0.5, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -444,7 +447,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 1.8, y: 0.9}
   m_EdgeRadius: 0
 --- !u!61 &395588599543895174
 BoxCollider2D:
@@ -539,13 +542,13 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 395588599543895173}
     m_ColliderPaths:
-    - - X: 14499707
+    - - X: 13999707
         Y: -4500000
-      - X: 14499707
+      - X: 13999707
         Y: 4500000
-      - X: 5500000
+      - X: -3999999
         Y: 4499707
-      - X: 5500293
+      - X: -3999706
         Y: -4500000
   - m_Collider: {fileID: 395588599543895174}
     m_ColliderPaths:
@@ -563,10 +566,10 @@ CompositeCollider2D:
       - {x: 0.3999413, y: 1.45}
       - {x: -1.4, y: 1.4499414}
       - {x: -1.3999414, y: 0.55}
-    - - {x: 1.4499414, y: -0.45000002}
-      - {x: 1.4499414, y: 0.45000002}
-      - {x: 0.55, y: 0.4499414}
-      - {x: 0.5500586, y: -0.45000002}
+    - - {x: 1.3999414, y: -0.45000002}
+      - {x: 1.3999414, y: 0.45000002}
+      - {x: -0.39999992, y: 0.4499414}
+      - {x: -0.3999413, y: -0.45000002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!114 &395588599543895169
@@ -984,7 +987,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1365,7 +1368,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1597,7 +1600,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1679,7 +1682,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1761,7 +1764,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0

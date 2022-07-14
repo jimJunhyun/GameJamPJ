@@ -69,49 +69,6 @@ public class GameUIManager : MonoBehaviour
         }
         yield return null;
     }
-    public void InitHpUI(int maxHP)
-    {
-        for (int i = 0; i < maxHP / 2; i++)
-        {
-            Instantiate(heartImage, hpPanel);
-        }
-        if (maxHP % 2 == 1)
-        {
-            Instantiate(halfHeartImage, hpPanel);
-        }
-
-    }
-
-    public void Heal(int healAfter)
-	{
-		for (int i = 0; i < healAfter; i++)
-		{
-            Debug.Log(Mathf.CeilToInt(i / 2));
-            Debug.Log(hpPanel.GetChild(Mathf.CeilToInt(i / 2)).GetComponent<Image>());
-            Image heart = hpPanel.GetChild(Mathf.CeilToInt(i / 2)).GetComponent<Image>();
-            if (heart.sprite == halfHeartImage.sprite)
-            {
-                heart.sprite = heartImage.sprite;
-            }
-            else
-            {
-                heart.sprite = halfHeartImage.sprite;
-            }
-        }
-	}
-    public void HitDmage(int hitBeforeHP)
-    {
-        Image heart = hitBeforeHP % 2 == 1 ?
-            hpPanel.transform.GetChild(hitBeforeHP / 2).GetComponent<Image>() : hpPanel.transform.GetChild((hitBeforeHP / 2) - 1).GetComponent<Image>();
-        if (hitBeforeHP % 2 == 1)
-        {
-            heart.sprite = emptyHeart.sprite;
-        }
-        else
-        {
-            heart.sprite = halfHeartImage.sprite;
-        }
-    }
     public void CoinUIUpdate(int val)
     {
         coinCntTxt.text = $"{val}";

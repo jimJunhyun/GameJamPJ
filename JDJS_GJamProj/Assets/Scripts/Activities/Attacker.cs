@@ -14,25 +14,50 @@ public class Attacker : MonoBehaviour
 
 	public bool preAttackWarn = true;
 
+	public bool isRandomAttack;
+
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
 	public Action attack;
 	
 	//[HideInInspector]
 	public int attackNo;
+	int prevAttNo;
+	bool frameWait = false;
 
     void Attack()
 	{
+		if (isRandomAttack)
+		{
+			attackNo = UnityEngine.Random.Range(0, range.Count);
+		}
+		for (int i = 0; i < range.Count; i++)
+		{
+			range[i].gameObject.SetActive(false);
+		}
         range[attackNo].transform.position = attPos.position;
-        StartCoroutine(DelayOnOff());
+		
+		
+		StartCoroutine(DelayOnOff());
+		StartCoroutine(DelayOff());
+	}
+
+	IEnumerator DelayOff()
+	{
+		frameWait = true;
+		yield return null;
+		frameWait = false;
+		attackTrigger = false;
 	}
 
     IEnumerator DelayOnOff()
 	{
+		
 		if (attackSound != null)
 		{
 			attackAudioSource.clip = attackSound[attackNo];
 			attackAudioSource.Play();
 		}
+		
 		if (preAttackWarn)
 		{
 			
@@ -54,6 +79,7 @@ public class Attacker : MonoBehaviour
 			range[attackNo].gameObject.SetActive(true);
 			yield return new WaitForSeconds(0.25f);
 			range[attackNo].gameObject.SetActive(false);
+			
 			if (warningRange != null)
 			{
 				warningRange[attackNo].SetActive(true);
@@ -61,6 +87,7 @@ public class Attacker : MonoBehaviour
 				warningRange[attackNo].SetActive(false);
 			}
 		}
+		
 	}
 
 	private void Awake()
@@ -77,20 +104,22 @@ public class Attacker : MonoBehaviour
 		
 	}
 
+
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if(prevAttNo != attackNo)
 		{
-			attackNo += 1;
-			if (attackNo >= range.Count)
+			for (int i = 0; i < range.Count; i++)
 			{
-				attackNo = 0;
+				range[i].gameObject.SetActive(false);
 			}
+			prevAttNo = attackNo;
 		}
-		if (attackTrigger)
+		if (attackTrigger && !frameWait)
 		{
-			attackTrigger = false;
+			
 			Attack();
+			
 		}
 		
 	}

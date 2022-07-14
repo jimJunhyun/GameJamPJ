@@ -22,6 +22,7 @@ public class Mover : MonoBehaviour
     [Header("적일 경우 체크. 밑의 것은 방향 조정자")]
 
     public bool isEnemy = true;
+    public bool isBoss = false;
 
     public Transform direction;
 
@@ -116,10 +117,23 @@ public class Mover : MonoBehaviour
                     if (isEnemy)
                     {
                         attack.attack.Invoke();
+						if (isBoss)
+						{
+                            anim.SetInteger("BossAttacker", attack.attackNo);
+                            anim.SetBool("Attack", true);
+						}
                     }
                     stop = false;
                     continue;
                 }
+				else
+				{
+					if (isBoss)
+					{
+                        anim.SetInteger("BossAttacker", -1);
+                        anim.SetBool("Attack", false);
+					}
+				}
                 Move();
             }
 			

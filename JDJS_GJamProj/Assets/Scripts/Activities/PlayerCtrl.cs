@@ -54,6 +54,7 @@ public class PlayerCtrl : MonoBehaviour
 		}
 		if (Input.GetMouseButtonDown(0) && attackable && !detect.shopping)
 		{
+			
 			myAtt.attackTrigger = true;
 			attackable = false;
 		}
