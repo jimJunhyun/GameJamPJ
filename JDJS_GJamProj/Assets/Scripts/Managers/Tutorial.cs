@@ -12,12 +12,14 @@ public class Tutorial : MonoBehaviour
     [SerializeField] List<Button> weaponList = new List<Button>();
     [SerializeField] Mover playerMover;
     [SerializeField] Attacker playerAttacker;
+    [SerializeField] Image Fade;
 
     public UnityEvent OnComplete;
 
     bool check;
     bool space = false;
     bool selectWeapon = false;
+    bool anyKeyStay = false;
     void Awake()
     {
         StartCoroutine(TextDelay());
@@ -69,13 +71,35 @@ public class Tutorial : MonoBehaviour
         seq.Append(Text.DOText("좌클릭을 해 무기로 공격을 해보십시오.", 1f));
         playerAttacker.enabled = true;
         yield return new WaitUntil(() => check);
+        check = false;
         ClearText.gameObject.SetActive(true);
         seq.Append(ClearText.transform.DOScale(10f, 0.2f));
         yield return new WaitForSeconds(0.2f);
         seq.Append(ClearText.transform.DOScale(8f, 0.1f));
-
         yield return new WaitForSeconds(0.3f);
-
+        playerMover.enabled = true;
+        yield return new WaitForSeconds(1f);
+        ClearText.gameObject.SetActive(false);
+        Text.text = "";
+        seq.Append(Text.DOText("한번 더 무기로 공격을 해보십시오.", 1f));
+        yield return new WaitForSeconds(1f);
+        selectWeapon = true;
+        playerAttacker.enabled = true;
+        yield return new WaitUntil(() => check);
+        check = false;
+        ClearText.gameObject.SetActive(true);
+        seq.Append(ClearText.transform.DOScale(10f, 0.2f));
+        yield return new WaitForSeconds(0.2f);
+        seq.Append(ClearText.transform.DOScale(8f, 0.1f));
+        yield return new WaitForSeconds(2f);
+        ClearText.gameObject.SetActive(false);
+        Text.text = "";
+        seq.Append(Text.DOText("축하합니다. 공격을 하여 돌아가십시오.", 1f));
+        anyKeyStay = true;
+        yield return new WaitUntil(() => check);
+        Fade.gameObject.SetActive(true);
+        seq.Append(Fade.DOColor(new Color(0, 0, 0, 1), 1f));
+        yield return new WaitForSeconds(1.5f);
         OnComplete.Invoke();
     }
     private void Update()
@@ -93,6 +117,14 @@ public class Tutorial : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 selectWeapon = false;
+                check = true;
+            }
+        }
+       if(anyKeyStay == true)
+        {
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                anyKeyStay = false;
                 check = true;
             }
         }
