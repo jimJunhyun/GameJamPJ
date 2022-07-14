@@ -91,7 +91,7 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= yellowVal;
-            playerMover.conDelay -= 0.25f;
+            playerMover.conDelay -= 0.15f;
             SPD.text = "SPD : " + playerMover.conDelay;
             bigYellowPotion.SetActive(false);
             
@@ -109,6 +109,8 @@ public class ShopManager : MonoBehaviour
                 playerAttack[i].damage += 1;
             }
             ATK.text = "ATK : " + playerAttack[attackNumber].damage;
+
+            Debug.Log("!!");
             smallRedPotion.SetActive(false);
 
         }
@@ -142,7 +144,7 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.coinNum -= SyellowVal;
             
-            playerMover.conDelay -= 0.1f;
+            playerMover.conDelay -= 0.05f;
             SPD.text = "SPD : " + playerMover.conDelay;
             smallYellowPotion.SetActive(false);
         }

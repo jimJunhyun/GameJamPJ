@@ -18,7 +18,6 @@ public class ShopDetect : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("!");
 			shopping = false;
 			shopPanel.SetActive(false);
 		}

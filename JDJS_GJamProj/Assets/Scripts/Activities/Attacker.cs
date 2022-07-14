@@ -29,15 +29,24 @@ public class Attacker : MonoBehaviour
 		}
         range[attackNo].transform.position = attPos.position;
         StartCoroutine(DelayOnOff());
+		StartCoroutine(DelayOff());
+	}
+
+	IEnumerator DelayOff()
+	{
+		yield return null;
+		attackTrigger = false;
 	}
 
     IEnumerator DelayOnOff()
 	{
+		
 		if (attackSound != null)
 		{
 			attackAudioSource.clip = attackSound[attackNo];
 			attackAudioSource.Play();
 		}
+		
 		if (preAttackWarn)
 		{
 			
@@ -59,6 +68,7 @@ public class Attacker : MonoBehaviour
 			range[attackNo].gameObject.SetActive(true);
 			yield return new WaitForSeconds(0.25f);
 			range[attackNo].gameObject.SetActive(false);
+			
 			if (warningRange != null)
 			{
 				warningRange[attackNo].SetActive(true);
@@ -66,6 +76,7 @@ public class Attacker : MonoBehaviour
 				warningRange[attackNo].SetActive(false);
 			}
 		}
+		
 	}
 
 	private void Awake()
@@ -95,8 +106,9 @@ public class Attacker : MonoBehaviour
 		}
 		if (attackTrigger)
 		{
-			attackTrigger = false;
+			
 			Attack();
+			
 		}
 		
 	}

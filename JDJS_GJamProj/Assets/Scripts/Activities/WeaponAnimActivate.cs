@@ -25,7 +25,7 @@ public class WeaponAnimActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (holder.attackTrigger)
+        if (holder.attackTrigger)
 		{
             weapons[currentHold].SetTrigger(useTriggerName);
 		}

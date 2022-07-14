@@ -939,9 +939,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 900
+  m_SortingOrder: 4
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.41960785}
+  m_Color: {r: 0.9528215, g: 1, b: 0, a: 0.41960785}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107888b7501e48a47934956e19a130e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooltime: 0.5
+  cooltime: 0.75
   ShopPanel: {fileID: 0}
   stageText: {fileID: 0}
 --- !u!114 &8076858744202109979
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   isEnemy: 0
   direction: {fileID: 8076858744202109981}
   initDelay: 0
-  conDelay: 0.3
+  conDelay: 0.5
   minDelay: 0
 --- !u!61 &8076858745768030977
 BoxCollider2D:
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58a2fe420864d5489d040d778192399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 123123123
+  maxHp: 6
   currentHp: 0
   HitTriggerName: Hit
   OnHit:

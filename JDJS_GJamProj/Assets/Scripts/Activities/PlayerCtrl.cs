@@ -54,6 +54,7 @@ public class PlayerCtrl : MonoBehaviour
 		}
 		if (Input.GetMouseButtonDown(0) && attackable && !detect.shopping)
 		{
+			
 			myAtt.attackTrigger = true;
 			attackable = false;
 		}
@@ -71,7 +72,6 @@ public class PlayerCtrl : MonoBehaviour
 			//}
 			currentStage = box.transform.parent.GetComponent<Transform>();
 			CameraManager.instance.MoveCMVcam(currentStage);
-			Debug.Log(currentStage.GetComponent<StageData>());
 			stageText.text = "1-" + currentStage.GetComponent<StageData>().Stagedata;
 			//currentStage.GetComponentsInChildren<Mover>(stageEnemys);
 			//for (int i = 0; i < stageEnemys.Count; i++)
