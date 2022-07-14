@@ -20,7 +20,6 @@ public class PlayerCtrl : MonoBehaviour
 
 	private void Awake()
 	{
-
 		//ShopPanel.SetActive(false);
 		detect = GetComponent<ShopDetect>();
 		myAtt = GetComponent<Attacker>();

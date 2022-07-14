@@ -105,7 +105,7 @@ public class Attacker : MonoBehaviour
 	}
 
 
-	private void Update()
+	private void LateUpdate()
 	{
 		if(prevAttNo != attackNo)
 		{
