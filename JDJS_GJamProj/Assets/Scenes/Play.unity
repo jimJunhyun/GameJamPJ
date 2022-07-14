@@ -2687,6 +2687,7 @@ GameObject:
   - component: {fileID: 1900078035}
   - component: {fileID: 1900078034}
   - component: {fileID: 1900078036}
+  - component: {fileID: 1900078039}
   - component: {fileID: 1900078037}
   - component: {fileID: 1900078038}
   m_Layer: 0
@@ -2856,6 +2857,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1900078039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900078033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2daa5d4a7948047b1170b14f1100a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: OverScene
 --- !u!1 &1909819221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8867471472476921334, guid: 5453527434143c349927f9d0a2e5e647, type: 3}
@@ -3314,7 +3328,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
@@ -3322,7 +3344,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1602055508}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1900078039}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
@@ -3330,11 +3360,23 @@ PrefabInstance:
       value: Shake
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ShakeCam, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076858745768030976, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030978, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
@@ -3343,7 +3385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030978, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 8076858745768030978, guid: 91d7c877ba75cb9448301cf7797f7b1e, type: 3}
       propertyPath: m_LocalPosition.y

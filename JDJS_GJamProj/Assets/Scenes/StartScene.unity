@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 706499810}
   - component: {fileID: 706499809}
   - component: {fileID: 706499812}
+  - component: {fileID: 706499813}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -346,7 +347,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 706499810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 706499813}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &706499810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +505,19 @@ MonoBehaviour:
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
+--- !u!114 &706499813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706499807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2daa5d4a7948047b1170b14f1100a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &848094206
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +531,7 @@ GameObject:
   - component: {fileID: 848094209}
   - component: {fileID: 848094208}
   - component: {fileID: 848094211}
+  - component: {fileID: 848094212}
   m_Layer: 5
   m_Name: startButton
   m_TagString: Untagged
@@ -575,9 +602,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1854566896}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Fade
+      - m_Target: {fileID: 848094212}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -732,6 +759,19 @@ MonoBehaviour:
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
+--- !u!114 &848094212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848094206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2daa5d4a7948047b1170b14f1100a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Play
 --- !u!1 &1642643797
 GameObject:
   m_ObjectHideFlags: 0
