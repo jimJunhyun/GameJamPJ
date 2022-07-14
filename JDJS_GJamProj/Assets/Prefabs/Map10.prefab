@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5152097196002343353}
   - component: {fileID: 3675321988767728444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BOX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3143,6 +3143,7 @@ GameObject:
   - component: {fileID: 5803460024151846693}
   - component: {fileID: 5803460024151846692}
   - component: {fileID: 1486060711}
+  - component: {fileID: 7532250508437042315}
   m_Layer: 0
   m_Name: Map10
   m_TagString: Untagged
@@ -3181,6 +3182,19 @@ Grid:
   m_CellLayout: 0
   m_CellSwizzle: 0
 --- !u!114 &1486060711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803460024151846691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fab12a2930cd442895723d3ebd1b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stagedata: 10
+--- !u!114 &7532250508437042315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
