@@ -117,7 +117,7 @@ MonoBehaviour:
   isEnemy: 1
   direction: {fileID: 395588599317224805}
   initDelay: 0.25
-  conDelay: 0.5
+  conDelay: 1
   minDelay: 0
 --- !u!61 &395588599078634465
 BoxCollider2D:
@@ -168,6 +168,7 @@ MonoBehaviour:
       m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
+  audioSource: {fileID: 0}
 --- !u!114 &395588599078634467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,7 +434,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 1, y: 0}
+  m_Offset: {x: 0.5, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -444,7 +445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 1.8, y: 0.9}
   m_EdgeRadius: 0
 --- !u!61 &395588599543895174
 BoxCollider2D:
@@ -539,13 +540,13 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 395588599543895173}
     m_ColliderPaths:
-    - - X: 14499707
+    - - X: 13999707
         Y: -4500000
-      - X: 14499707
+      - X: 13999707
         Y: 4500000
-      - X: 5500000
+      - X: -3999999
         Y: 4499707
-      - X: 5500293
+      - X: -3999706
         Y: -4500000
   - m_Collider: {fileID: 395588599543895174}
     m_ColliderPaths:
@@ -563,10 +564,10 @@ CompositeCollider2D:
       - {x: 0.3999413, y: 1.45}
       - {x: -1.4, y: 1.4499414}
       - {x: -1.3999414, y: 0.55}
-    - - {x: 1.4499414, y: -0.45000002}
-      - {x: 1.4499414, y: 0.45000002}
-      - {x: 0.55, y: 0.4499414}
-      - {x: 0.5500586, y: -0.45000002}
+    - - {x: 1.3999414, y: -0.45000002}
+      - {x: 1.3999414, y: 0.45000002}
+      - {x: -0.39999992, y: 0.4499414}
+      - {x: -0.3999413, y: -0.45000002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!114 &395588599543895169

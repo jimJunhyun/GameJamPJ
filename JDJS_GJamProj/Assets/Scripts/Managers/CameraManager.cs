@@ -12,7 +12,7 @@ public class CameraManager : MonoBehaviour
     void Start()
     {
         VCam = GameObject.Find("CMVcam").GetComponent<CinemachineVirtualCamera>();
-        VCam.Follow = GameObject.Find("Map1").GetComponent<Transform>();
+        VCam.Follow = GameObject.Find("Map0").GetComponent<Transform>();
     }
     public void MoveCMVcam(Transform mapTrm)
     {

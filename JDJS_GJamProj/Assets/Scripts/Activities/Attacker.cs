@@ -19,9 +19,14 @@ public class Attacker : MonoBehaviour
 	
 	//[HideInInspector]
 	public int attackNo;
+	int prevAttNo;
 
     void Attack()
 	{
+		for (int i = 0; i < range.Count; i++)
+		{
+			range[i].gameObject.SetActive(false);
+		}
         range[attackNo].transform.position = attPos.position;
         StartCoroutine(DelayOnOff());
 	}
@@ -77,15 +82,16 @@ public class Attacker : MonoBehaviour
 		
 	}
 
+
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if(prevAttNo != attackNo)
 		{
-			attackNo += 1;
-			if (attackNo >= range.Count)
+			for (int i = 0; i < range.Count; i++)
 			{
-				attackNo = 0;
+				range[i].gameObject.SetActive(false);
 			}
+			prevAttNo = attackNo;
 		}
 		if (attackTrigger)
 		{

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Tutorial : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Tutorial : MonoBehaviour
     [SerializeField] List<Button> weaponList = new List<Button>();
     [SerializeField] Mover playerMover;
     [SerializeField] Attacker playerAttacker;
+
+    public UnityEvent OnComplete;
+
     bool check;
     bool space = false;
     bool selectWeapon = false;
@@ -69,6 +73,10 @@ public class Tutorial : MonoBehaviour
         seq.Append(ClearText.transform.DOScale(10f, 0.2f));
         yield return new WaitForSeconds(0.2f);
         seq.Append(ClearText.transform.DOScale(8f, 0.1f));
+
+        yield return new WaitForSeconds(0.3f);
+
+        OnComplete.Invoke();
     }
     private void Update()
     {

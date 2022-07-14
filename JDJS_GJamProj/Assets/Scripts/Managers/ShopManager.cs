@@ -54,7 +54,7 @@ public class ShopManager : MonoBehaviour
             
 			for (int i = 0; i < playerAttack.Count; i++)
 			{
-                playerAttack[i].damage += 1;
+                playerAttack[i].damage += 2;
             }
             ATK.text = "ATK : " + playerAttack[attackNumber].damage;
             bigRedPotion.SetActive(false);
@@ -130,7 +130,7 @@ public class ShopManager : MonoBehaviour
         if (SgreenVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SgreenVal;
-            playerHp.HpIncrease(2);
+            playerHp.HpIncrease(3);
             smallGreenPotion.SetActive(false);
         }
 
@@ -140,9 +140,10 @@ public class ShopManager : MonoBehaviour
         if (SyellowVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SyellowVal;
-            smallYellowPotion.SetActive(false);
+            
             playerMover.conDelay -= 0.1f;
             SPD.text = "SPD : " + playerMover.conDelay;
+            smallYellowPotion.SetActive(false);
         }
 
     }
@@ -164,5 +165,8 @@ public class ShopManager : MonoBehaviour
         int.TryParse(smallBluePotionVal.text, out SblueVal);
         int.TryParse(smallGreenPotionVal.text, out SgreenVal);
         int.TryParse(smallYellowPotionVal.text, out SyellowVal);
+        ATK.text = "ATK : " + playerAttack[attackNumber].damage;
+        ASPD.text = "ASPD : " + playerCont.cooltime;
+        SPD.text = "SPD : " + playerMover.conDelay;
     }
 }

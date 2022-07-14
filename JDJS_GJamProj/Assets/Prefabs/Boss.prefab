@@ -857,6 +857,7 @@ MonoBehaviour:
       m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
+  audioSource: {fileID: 0}
 --- !u!50 &1360130369819757891
 Rigidbody2D:
   serializedVersion: 4
@@ -947,7 +948,7 @@ MonoBehaviour:
   isEnemy: 1
   direction: {fileID: 1360130369519244251}
   initDelay: 0.5
-  conDelay: 1
+  conDelay: 1.5
   minDelay: 0
 --- !u!114 &3727463161195701931
 MonoBehaviour:

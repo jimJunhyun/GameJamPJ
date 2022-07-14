@@ -117,7 +117,7 @@ MonoBehaviour:
   isEnemy: 1
   direction: {fileID: 395588599317224805}
   initDelay: 0.25
-  conDelay: 0.5
+  conDelay: 1
   minDelay: 0
 --- !u!61 &395588599078634465
 BoxCollider2D:
@@ -168,6 +168,7 @@ MonoBehaviour:
       m_Calls: []
   dropCoin: {fileID: 7224313752403014912, guid: 7af0e8f3caccf814e863b1997a41cbed, type: 3}
   isPlayer: 0
+  audioSource: {fileID: 0}
 --- !u!114 &395588599078634467
 MonoBehaviour:
   m_ObjectHideFlags: 0
