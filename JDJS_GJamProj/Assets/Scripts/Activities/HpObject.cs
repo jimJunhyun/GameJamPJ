@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.Audio;
 public class HpObject : MonoBehaviour
 {
 	public int maxHp;
@@ -15,6 +15,7 @@ public class HpObject : MonoBehaviour
 	public UnityEvent OnDead;
 	[SerializeField] GameObject dropCoin;
 	public bool isPlayer;
+	public AudioSource audioSource;
 
 
 	Animator anim;
@@ -40,6 +41,7 @@ public class HpObject : MonoBehaviour
 
 	private void Start()
 	{
+		audioSource = GetComponent<AudioSource>();
 		currentHp = maxHp;
 		if (isPlayer)
 		{
@@ -70,6 +72,7 @@ public class HpObject : MonoBehaviour
     {
 		if (collision.CompareTag("Spikes"))
         {
+			audioSource.Play();
 			currentHp -= 1;
 			Debug.Log(currentHp);
         }
