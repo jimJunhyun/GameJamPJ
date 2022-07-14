@@ -14,27 +14,38 @@ public class Attacker : MonoBehaviour
 
 	public bool preAttackWarn = true;
 
+	public bool isRandomAttack;
+
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
 	public Action attack;
 	
 	//[HideInInspector]
 	public int attackNo;
 	int prevAttNo;
+	bool frameWait = false;
 
     void Attack()
 	{
+		if (isRandomAttack)
+		{
+			attackNo = UnityEngine.Random.Range(0, range.Count);
+		}
 		for (int i = 0; i < range.Count; i++)
 		{
 			range[i].gameObject.SetActive(false);
 		}
         range[attackNo].transform.position = attPos.position;
-        StartCoroutine(DelayOnOff());
+		
+		
+		StartCoroutine(DelayOnOff());
 		StartCoroutine(DelayOff());
 	}
 
 	IEnumerator DelayOff()
 	{
+		frameWait = true;
 		yield return null;
+		frameWait = false;
 		attackTrigger = false;
 	}
 
@@ -104,7 +115,7 @@ public class Attacker : MonoBehaviour
 			}
 			prevAttNo = attackNo;
 		}
-		if (attackTrigger)
+		if (attackTrigger && !frameWait)
 		{
 			
 			Attack();

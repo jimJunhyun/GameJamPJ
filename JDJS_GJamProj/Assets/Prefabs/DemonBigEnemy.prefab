@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -197,6 +197,7 @@ MonoBehaviour:
   runBoolName: Run
   idleBoolName: Idle
   isEnemy: 1
+  isBoss: 0
   direction: {fileID: 395588599317224805}
   initDelay: 0.25
   conDelay: 1
@@ -243,10 +244,11 @@ MonoBehaviour:
   warningRange:
   - {fileID: 3904076955422994149}
   attackSound:
-  - {fileID: 8300000, guid: aba3f7d58d8f9604a98c777c0ea44c3a, type: 3}
+  - {fileID: 8300000, guid: 549d9253efee2034080213927179f9a1, type: 3}
   attackTrigger: 0
   attackAudioSource: {fileID: 1616830171266496050}
   preAttackWarn: 1
+  isRandomAttack: 0
   attackNo: 0
 --- !u!114 &395588599078634492
 MonoBehaviour:
@@ -349,8 +351,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d4ef45d4af818de4bb0410db9e0e6b68, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 549d9253efee2034080213927179f9a1, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -662,7 +664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395588599831579232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 395588600499845157}
@@ -1026,7 +1028,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1356,7 +1358,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0
@@ -1527,7 +1529,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 900
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.47400004, b: 0.47400004, a: 0.64705884}
   m_FlipX: 0

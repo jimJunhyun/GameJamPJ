@@ -91,7 +91,7 @@ public class ShopManager : MonoBehaviour
         {
             CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= yellowVal;
-            playerMover.conDelay -= 0.15f;
+            playerMover.conDelay -= 0.1f;
             SPD.text = "SPD : " + playerMover.conDelay;
             bigYellowPotion.SetActive(false);
             
@@ -103,7 +103,7 @@ public class ShopManager : MonoBehaviour
         if (SredVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SredVal;
-            
+            CoinManager.Instance.BuyItem();
             for (int i = 0; i < playerAttack.Count; i++)
             {
                 playerAttack[i].damage += 1;
@@ -119,7 +119,7 @@ public class ShopManager : MonoBehaviour
         if (SblueVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SblueVal;
-            
+            CoinManager.Instance.BuyItem();
             playerCont.cooltime -= 0.25f;
             ASPD.text = "ASPD : " + playerCont.cooltime;
             smallBluePotion.SetActive(false);
@@ -130,6 +130,7 @@ public class ShopManager : MonoBehaviour
     {
         if (SgreenVal <= CoinManager.Instance.coinNum)
         {
+            CoinManager.Instance.BuyItem();
             CoinManager.Instance.coinNum -= SgreenVal;
             playerHp.HpIncrease(3);
             smallGreenPotion.SetActive(false);
@@ -141,7 +142,7 @@ public class ShopManager : MonoBehaviour
         if (SyellowVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SyellowVal;
-            
+            CoinManager.Instance.BuyItem();
             playerMover.conDelay -= 0.05f;
             SPD.text = "SPD : " + playerMover.conDelay;
             smallYellowPotion.SetActive(false);
