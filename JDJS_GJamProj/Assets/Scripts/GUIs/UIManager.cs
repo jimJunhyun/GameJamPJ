@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Button Play;
     public Image Panel;
     public Image Boss;
+    public Image image;
     float time = 0;
     float ftime = 1f;
     Animator animator;
@@ -42,8 +43,15 @@ public class UIManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Sequence seq = DOTween.Sequence();
+        seq.Append(image.DOColor(new Color(0,0,0,0),1f));
+        seq.OnComplete(() =>
+        {
+            image.gameObject.SetActive(false);
+        });
+
         //MenuPanel.DOAnchorPos(Vector2.zero, 0.25f);
     }
 
