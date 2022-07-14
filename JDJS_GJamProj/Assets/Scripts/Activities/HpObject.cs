@@ -22,11 +22,6 @@ public class HpObject : MonoBehaviour
 
 	void HpDecrease(int dam)
 	{
-		if (isPlayer)
-		{
-			GameUIManager.instane.HitDmage(currentHp);
-		}
-		
 		OnHit.Invoke();
 		currentHp -= dam;
 		
@@ -36,17 +31,12 @@ public class HpObject : MonoBehaviour
 	public void HpIncrease(int amount)
 	{
 		currentHp  = Mathf.Min(currentHp + amount, maxHp);
-		GameUIManager.instane.Heal(currentHp);
 	}
 
 	private void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
 		currentHp = maxHp;
-		if (isPlayer)
-		{
-			GameUIManager.instane.InitHpUI(currentHp);
-		}
 		Damaged = HpDecrease;
 		anim = GetComponent<Animator>();
 	}

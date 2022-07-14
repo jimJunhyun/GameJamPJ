@@ -119,9 +119,10 @@ public class ShopManager : MonoBehaviour
         if (SblueVal <= CoinManager.Instance.coinNum)
         {
             CoinManager.Instance.coinNum -= SblueVal;
-            smallBluePotion.SetActive(false);
+            
             playerCont.cooltime -= 0.25f;
             ASPD.text = "ASPD : " + playerCont.cooltime;
+            smallBluePotion.SetActive(false);
         }
 
     }
