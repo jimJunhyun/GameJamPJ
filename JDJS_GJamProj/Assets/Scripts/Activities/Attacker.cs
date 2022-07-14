@@ -17,7 +17,7 @@ public class Attacker : MonoBehaviour
 	[Tooltip("적들을 위한 공격 대리자. Mover에서 Invoke한다.")]
 	public Action attack;
 	
-	[HideInInspector]
+	//[HideInInspector]
 	public int attackNo;
 
     void Attack()
